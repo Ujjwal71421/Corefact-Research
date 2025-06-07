@@ -1,55 +1,82 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f4f4f4;
-    color: #333;
-  }
-  
-  header {
-    background: #004c6d;
+/* Logo in header */
+header {
+    display: flex;
+    align-items: center;
+    background-color: #003c58;
     color: #fff;
-    padding: 20px 40px;
-    text-align: center;
+    padding: 20px;
+  }
+  header .logo {
+    height: 60px;
+    margin-right: 20px;
+  }
+  header .header-text h1 {
+    margin-bottom: 5px;
+    font-size: 2.4em;
+  }
+  header .header-text p {
+    font-size: 1.1em;
+    font-weight: 300;
   }
   
+  /* Button-style nav links */
   nav {
-    background: #023047;
-    padding: 10px;
-    text-align: center;
-  }
-  
-  nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  nav a:hover {
-    text-decoration: underline;
-  }
-  
-  section {
-    padding: 40px;
-    background: #fff;
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
-  
-  footer {
-    background: #002d3a;
-    color: white;
     text-align: center;
     padding: 15px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    background: #005377;
+  }
+  nav .btn {
+    display: inline-block;
+    margin: 0 8px;
+    padding: 10px 18px;
+    text-decoration: none;
+    font-weight: 500;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: background 0.3s, border-color 0.3s;
+    color: #fff;
+  }
+  nav .btn:hover {
+    border-color: #fff;
+  }
+  nav .btn.primary {
+    background: #ff7f00;
+    color: #fff;
+  }
+  nav .btn.primary:hover {
+    background: #e56e00;
   }
   
-  ul {
+  /* Leadership section */
+  #leadership {
+    padding: 40px 20px;
+    background: #eef5fb;
+    margin: 30px auto;
+    max-width: 800px;
+    border-radius: 10px;
+  }
+  .leadership-list {
+    list-style: none;
+    padding: 0;
+  }
+  .leadership-list li {
+    margin: 10px 0;
+    font-size: 1.1em;
+  }
+  
+  /* Key facts list style */
+  .key-facts {
     list-style: square inside;
-    padding-left: 0;
+    margin-top: 15px;
+  }
+  
+  /* Contact section links */
+  #contact a {
+    color: #005377;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  #contact a:hover {
+    text-decoration: underline;
   }
   
