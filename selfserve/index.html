@@ -2,48 +2,82 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Corefact Research - Survey Redirect</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Survey Status - Corefact Research</title>
   <style>
-    body { font-family: Arial, sans-serif; padding: 2em; text-align: center; background: #f8f9fa; color: #333; }
-    .message { margin-top: 2em; font-size: 1.2em; }
-    .success { color: green; }
-    .error { color: red; }
-    hr { margin: 2em 0; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      color: #333;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .box {
+      background: #fff;
+      max-width: 500px;
+      margin: auto;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+    .status {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .code {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+    .powered {
+      margin-top: 30px;
+      font-size: 14px;
+      color: #999;
+    }
+    .error {
+      color: red;
+    }
   </style>
 </head>
 <body>
-  <h1>Corefact Research</h1>
-  <div id="message" class="message">Loading...</div>
+  <div class="box">
+    <div class="status" id="message">Loading...</div>
+    <div class="code" id="code"></div>
+    <div class="powered">Powered by Corefact Research</div>
+  </div>
 
   <script>
     const params = new URLSearchParams(window.location.search);
-    const sid = params.get('sid');
-    const country = params.get('country');
-    const status = params.get('status');
+    const status = params.get("status");
+    const sid = params.get("sid");
+    const country = params.get("country");
 
-    const messageDiv = document.getElementById('message');
+    const messageEl = document.getElementById("message");
+    const codeEl = document.getElementById("code");
 
-    if (!sid || !country || !status) {
-      messageDiv.textContent = "Missing parameters. Please check your survey URL.";
-      messageDiv.className = 'message error';
+    if (!status || !sid || !country) {
+      messageEl.textContent = "❌ Missing parameters. Please check your survey URL.";
+      messageEl.classList.add("error");
+      codeEl.textContent = "";
     } else {
-      const statusMessages = {
-        '111': '✅ Survey Completed. Thank you!',
-        '222': '🚫 Disqualified from the survey.',
-        '333': '🚫 Quota Full for your segment.',
-        '444': '🚫 Survey Rejected or Flagged.',
-      };
+      let message = "Unknown status";
+      switch(status) {
+        case "111":
+          message = "✅ Survey Completed";
+          break;
+        case "222":
+          message = "🚫 Disqualified";
+          break;
+        case "333":
+          message = "🚫 Quota Full";
+          break;
+        case "444":
+          message = "🚫 Rejected/Flagged";
+          break;
+      }
 
-      const displayMessage = statusMessages[status] || 'Unknown status code.';
-
-      messageDiv.innerHTML = `
-        <p><strong>SID:</strong> ${sid}</p>
-        <p><strong>Country:</strong> ${country}</p>
-        <p><strong>Status:</strong> ${displayMessage}</p>
-        <hr />
-        <p>Powered by <strong>Corefact Research</strong></p>
-      `;
+      messageEl.textContent = message;
+      codeEl.textContent = `Reward Code: ${status} | SID: ${sid} | Country: ${country}`;
     }
   </script>
 </body>
