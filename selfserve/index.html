@@ -5,46 +5,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Survey Status</title>
   <style>
-    body { font-family: Arial, sans-serif; text-align: center; margin-top: 10%; background: #f9f9f9; }
-    .box { display: inline-block; padding: 2rem; border-radius: 10px; background: white; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-    h1 { color: #3b82f6; }
-    .code { font-size: 1.2rem; margin-top: 1rem; color: #888; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      color: #333;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .box {
+      background: #fff;
+      max-width: 500px;
+      margin: auto;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+    .status {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .code {
+      font-size: 18px;
+      color: #777;
+      margin-bottom: 20px;
+    }
+    .powered {
+      margin-top: 30px;
+      font-size: 14px;
+      color: #999;
+    }
   </style>
 </head>
 <body>
   <div class="box">
-    <h1 id="message">Loading...</h1>
+    <div class="status" id="message">Loading...</div>
     <div class="code" id="code"></div>
-    <p>Powered by Corefact Research</p>
+    <div class="powered">Powered by Corefact Research</div>
   </div>
 
   <script>
     const params = new URLSearchParams(window.location.search);
     const status = params.get("status");
-    const msg = document.getElementById("message");
-    const code = document.getElementById("code");
+    const sid = params.get("sid");
+    const country = params.get("country");
 
+    const messageEl = document.getElementById("message");
+    const codeEl = document.getElementById("code");
+
+    let message = "Unknown status";
     switch(status) {
       case "111":
-        msg.innerText = "✅ Survey Completed";
-        code.innerText = "Reward: 111";
+        message = "✅ Survey Completed";
         break;
       case "222":
-        msg.innerText = "🚫 You did not qualify";
-        code.innerText = "Code: 222";
+        message = "🚫 Disqualified";
         break;
       case "333":
-        msg.innerText = "🚫 Quota Full";
-        code.innerText = "Code: 333";
+        message = "🚫 Quota Full";
         break;
       case "444":
-        msg.innerText = "🚫 Survey Rejected";
-        code.innerText = "Code: 444";
+        message = "🚫 Rejected/Flagged";
         break;
-      default:
-        msg.innerText = "Unknown Status";
-        code.innerText = "Please contact support.";
     }
+
+    messageEl.textContent = message;
+    codeEl.textContent = `Reward Code: ${status} | SID: ${sid || 'N/A'} | Country: ${country || 'N/A'}`;
   </script>
 </body>
 </html>
