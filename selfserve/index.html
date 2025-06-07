@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Survey Status</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; margin-top: 10%; background: #f9f9f9; }
+    .box { display: inline-block; padding: 2rem; border-radius: 10px; background: white; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    h1 { color: #3b82f6; }
+    .code { font-size: 1.2rem; margin-top: 1rem; color: #888; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1 id="message">Loading...</h1>
+    <div class="code" id="code"></div>
+    <p>Powered by Corefact Research</p>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const status = params.get("status");
+    const msg = document.getElementById("message");
+    const code = document.getElementById("code");
+
+    switch(status) {
+      case "111":
+        msg.innerText = "✅ Survey Completed";
+        code.innerText = "Reward: 111";
+        break;
+      case "222":
+        msg.innerText = "🚫 You did not qualify";
+        code.innerText = "Code: 222";
+        break;
+      case "333":
+        msg.innerText = "🚫 Quota Full";
+        code.innerText = "Code: 333";
+        break;
+      case "444":
+        msg.innerText = "🚫 Survey Rejected";
+        code.innerText = "Code: 444";
+        break;
+      default:
+        msg.innerText = "Unknown Status";
+        code.innerText = "Please contact support.";
+    }
+  </script>
+</body>
+</html>
