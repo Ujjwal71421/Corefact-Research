@@ -27,7 +27,7 @@
     .code {
       font-size: 18px;
       color: #555;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
     .powered {
       margin-top: 30px;
@@ -43,6 +43,7 @@
   <div class="box">
     <div class="status" id="message">Loading...</div>
     <div class="code" id="code"></div>
+    <div class="code" id="respId"></div>
     <div class="powered">Powered by Corefact Research</div>
   </div>
 
@@ -51,6 +52,7 @@
     const status = params.get("status");
     const sid = params.get("sid");
     const country = params.get("country");
+    const respId = params.get("resp_id");
 
     const messageEl = document.getElementById("message");
     const codeEl = document.getElementById("code");
@@ -78,6 +80,10 @@
 
       messageEl.textContent = message;
       codeEl.textContent = `Reward Code: ${status} | SID: ${sid} | Country: ${country}`;
+
+      if (respId) {
+        document.getElementById("respId").textContent = `Respondent ID: ${respId}`;
+      }
     }
   </script>
 </body>
