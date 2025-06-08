@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Survey Status - Corefact Research</title>
+  <style>
+    body { font-family: Arial; padding: 50px; text-align: center; background: #f0f0f0; }
+    .card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    .meta { margin-top: 15px; color: #555; font-size: 16px; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2 id="mainMsg">Processing...</h2>
+    <div class="meta" id="info"></div>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const status = params.get("status");
+    const respId = params.get("resp_id") || "Not Provided";
+    const source = params.get("utm_source") || "unknown";
+    const campaign = params.get("utm_campaign") || "unknown";
+    const wave = params.get("wave") || "N/A";
+    const lang = params.get("Lang") || "N/A";
+    const list = params.get("list") || "N/A";
+
+    const msgMap = {
+      "111": "✅ Survey Completed",
+      "222": "❌ Disqualified",
+      "333": "⚠️ Quota Full",
+      "444": "🚫 Rejected"
+    };
+
+    document.getElementById("mainMsg").innerText = msgMap[status] || "🔎 Unknown Status";
+
+    document.getElementById("info").innerText =
+      `Source: ${source} | Campaign: ${campaign} | Wave: ${wave} | Lang: ${lang} | List: ${list} | Respondent ID: ${respId} | Status: ${status}`;
+  </script>
+</body>
+</html>
