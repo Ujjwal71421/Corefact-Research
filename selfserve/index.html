@@ -74,25 +74,32 @@
     const sid = params.get("sid");
     const country = params.get("country");
     const respId = params.get("resp_id");
-    const lang = params.get("lang") || "en";
+
+    // Load lang from URL or localStorage or default to 'en'
+    let lang = params.get("lang") || localStorage.getItem("lang") || "en";
+    localStorage.setItem("lang", lang);
 
     const messageEl = document.getElementById("message");
     const codeEl = document.getElementById("code");
     const respIdEl = document.getElementById("respId");
     const langSelect = document.getElementById("languageSelect");
 
-    // Set selected language in dropdown
+    // Set dropdown to current language
     langSelect.value = lang;
 
-    // Reload page on language change
+    // Change language & reload page with new lang param
     langSelect.addEventListener("change", () => {
-      params.set("lang", langSelect.value);
+      const selectedLang = langSelect.value;
+      localStorage.setItem("lang", selectedLang);
+      params.set("lang", selectedLang);
       window.location.search = params.toString();
     });
 
-    // Apply RTL layout for Arabic
+    // RTL support
     if (lang === "ar") {
       document.body.setAttribute("dir", "rtl");
+    } else {
+      document.body.removeAttribute("dir");
     }
 
     const messages = {
@@ -128,7 +135,7 @@
         disqualified: "🚫 Disqualifiziert",
         quotaFull: "🚫 Kontingent voll",
         rejected: "🚫 Abgelehnt/Markiert",
-        missingParams: "❌ Fehlende Parameter. Bitte überprüfen Sie die Umfragelink.",
+        missingParams: "❌ Fehlende Parameter. Bitte überprüfen Sie den Link.",
         respondent: "Teilnehmer-ID",
         rewardCode: "Belohnungscode"
       },
@@ -137,7 +144,7 @@
         disqualified: "🚫 Descalificado",
         quotaFull: "🚫 Cuota completa",
         rejected: "🚫 Rechazado/Marcado",
-        missingParams: "❌ Faltan parámetros. Por favor verifique su enlace.",
+        missingParams: "❌ Faltan parámetros. Por favor, verifique el enlace.",
         respondent: "ID del encuestado",
         rewardCode: "Código de recompensa"
       },
@@ -146,7 +153,7 @@
         disqualified: "🚫 Squalificato",
         quotaFull: "🚫 Quota piena",
         rejected: "🚫 Rifiutato/Segnalato",
-        missingParams: "❌ Parametri mancanti. Controlla il tuo URL.",
+        missingParams: "❌ Parametri mancanti. Controlla il tuo link.",
         respondent: "ID del partecipante",
         rewardCode: "Codice premio"
       },
