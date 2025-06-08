@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Survey Status - Corefact Research</title>
   <style>
     body {
@@ -37,14 +37,6 @@
     .error {
       color: red;
     }
-    .lang-selector {
-      margin-top: 20px;
-    }
-    select {
-      padding: 8px;
-      font-size: 16px;
-      margin-top: 10px;
-    }
   </style>
 </head>
 <body>
@@ -52,19 +44,6 @@
     <div class="status" id="message">Loading...</div>
     <div class="code" id="code"></div>
     <div class="code" id="respId"></div>
-    <div class="lang-selector">
-      🌐 Select Language:
-      <select id="languageSelect">
-        <option value="en">English</option>
-        <option value="hi">Hindi</option>
-        <option value="fr">French</option>
-        <option value="de">German</option>
-        <option value="es">Spanish</option>
-        <option value="it">Italian</option>
-        <option value="ar">Arabic</option>
-        <option value="zh">Chinese</option>
-      </select>
-    </div>
     <div class="powered">Powered by Corefact Research</div>
   </div>
 
@@ -74,34 +53,13 @@
     const sid = params.get("sid");
     const country = params.get("country");
     const respId = params.get("resp_id");
-
-    // Load lang from URL or localStorage or default to 'en'
-    let lang = params.get("lang") || localStorage.getItem("lang") || "en";
-    localStorage.setItem("lang", lang);
+    const lang = params.get("lang") || "en"; // default language
 
     const messageEl = document.getElementById("message");
     const codeEl = document.getElementById("code");
     const respIdEl = document.getElementById("respId");
-    const langSelect = document.getElementById("languageSelect");
 
-    // Set dropdown to current language
-    langSelect.value = lang;
-
-    // Change language & reload page with new lang param
-    langSelect.addEventListener("change", () => {
-      const selectedLang = langSelect.value;
-      localStorage.setItem("lang", selectedLang);
-      params.set("lang", selectedLang);
-      window.location.search = params.toString();
-    });
-
-    // RTL support
-    if (lang === "ar") {
-      document.body.setAttribute("dir", "rtl");
-    } else {
-      document.body.removeAttribute("dir");
-    }
-
+    // Language dictionary
     const messages = {
       en: {
         completed: "✅ Survey Completed",
@@ -112,14 +70,14 @@
         respondent: "Respondent ID",
         rewardCode: "Reward Code"
       },
-      hi: {
-        completed: "✅ सर्वेक्षण पूरा हुआ",
-        disqualified: "🚫 अयोग्य",
-        quotaFull: "🚫 कोटा भर गया",
-        rejected: "🚫 अस्वीकृत/झंडी दिखा दी गई",
-        missingParams: "❌ कुछ जानकारियाँ गायब हैं। कृपया लिंक की जांच करें।",
-        respondent: "प्रतिभागी आईडी",
-        rewardCode: "इनाम कोड"
+      de: {
+        completed: "✅ Umfrage abgeschlossen",
+        disqualified: "🚫 Disqualifiziert",
+        quotaFull: "🚫 Kontingent voll",
+        rejected: "🚫 Abgelehnt/Markiert",
+        missingParams: "❌ Fehlende Parameter. Bitte überprüfen Sie Ihre Umfrage-URL.",
+        respondent: "Teilnehmer-ID",
+        rewardCode: "Belohnungscode"
       },
       fr: {
         completed: "✅ Enquête terminée",
@@ -130,51 +88,16 @@
         respondent: "ID du participant",
         rewardCode: "Code de récompense"
       },
-      de: {
-        completed: "✅ Umfrage abgeschlossen",
-        disqualified: "🚫 Disqualifiziert",
-        quotaFull: "🚫 Kontingent voll",
-        rejected: "🚫 Abgelehnt/Markiert",
-        missingParams: "❌ Fehlende Parameter. Bitte überprüfen Sie den Link.",
-        respondent: "Teilnehmer-ID",
-        rewardCode: "Belohnungscode"
-      },
-      es: {
-        completed: "✅ Encuesta completada",
-        disqualified: "🚫 Descalificado",
-        quotaFull: "🚫 Cuota completa",
-        rejected: "🚫 Rechazado/Marcado",
-        missingParams: "❌ Faltan parámetros. Por favor, verifique el enlace.",
-        respondent: "ID del encuestado",
-        rewardCode: "Código de recompensa"
-      },
-      it: {
-        completed: "✅ Sondaggio completato",
-        disqualified: "🚫 Squalificato",
-        quotaFull: "🚫 Quota piena",
-        rejected: "🚫 Rifiutato/Segnalato",
-        missingParams: "❌ Parametri mancanti. Controlla il tuo link.",
-        respondent: "ID del partecipante",
-        rewardCode: "Codice premio"
-      },
-      ar: {
-        completed: "✅ تم إكمال الاستبيان",
-        disqualified: "🚫 غير مؤهل",
-        quotaFull: "🚫 الحد الأقصى مكتمل",
-        rejected: "🚫 مرفوض / تم الإبلاغ",
-        missingParams: "❌ معلمات مفقودة. يرجى التحقق من الرابط.",
-        respondent: "معرّف المشارك",
-        rewardCode: "رمز المكافأة"
-      },
-      zh: {
-        completed: "✅ 调查已完成",
-        disqualified: "🚫 不符合资格",
-        quotaFull: "🚫 配额已满",
-        rejected: "🚫 被拒绝/已标记",
-        missingParams: "❌ 缺少参数。请检查调查链接。",
-        respondent: "受访者 ID",
-        rewardCode: "奖励码"
+      hi: {
+        completed: "✅ सर्वेक्षण पूरा हुआ",
+        disqualified: "🚫 अयोग्य",
+        quotaFull: "🚫 कोटा भर गया",
+        rejected: "🚫 अस्वीकृत/झंडी दिखा दी गई",
+        missingParams: "❌ कुछ जानकारियाँ गायब हैं। कृपया लिंक की जांच करें।",
+        respondent: "प्रतिभागी आईडी",
+        rewardCode: "इनाम कोड"
       }
+      // add more languages here if needed
     };
 
     const t = messages[lang] || messages.en;
@@ -183,6 +106,7 @@
       messageEl.textContent = t.missingParams;
       messageEl.classList.add("error");
       codeEl.textContent = "";
+      respIdEl.textContent = "";
     } else {
       let message;
       switch (status) {
@@ -204,6 +128,7 @@
 
       messageEl.textContent = message;
       codeEl.textContent = `${t.rewardCode}: ${status} | SID: ${sid} | Country: ${country}`;
+
       if (respId) {
         respIdEl.textContent = `${t.respondent}: ${respId}`;
       }
