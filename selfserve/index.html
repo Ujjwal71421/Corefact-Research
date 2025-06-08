@@ -1,90 +1,76 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Survey Status - Corefact Research</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f6f8;
-      color: #333;
-      text-align: center;
-      padding: 60px 20px;
-    }
-    .box {
-      background: #fff;
-      max-width: 500px;
-      margin: auto;
-      padding: 40px;
-      border-radius: 15px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    }
-    .status {
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
-    .code {
-      font-size: 18px;
-      color: #555;
-      margin-bottom: 10px;
-    }
-    .powered {
-      margin-top: 30px;
-      font-size: 14px;
-      color: #999;
-    }
-    .error {
-      color: red;
-    }
-  </style>
-</head>
-<body>
-  <div class="box">
-    <div class="status" id="message">Loading...</div>
-    <div class="code" id="code"></div>
-    <div class="code" id="respId"></div>
-    <div class="powered">Powered by Corefact Research</div>
-  </div>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const status = params.get("status");
+  const sid = params.get("sid");
+  const country = params.get("country");
+  const respId = params.get("resp_id");
+  const lang = params.get("lang") || "en"; // default language
 
-  <script>
-    const params = new URLSearchParams(window.location.search);
-    const status = params.get("status");
-    const sid = params.get("sid");
-    const country = params.get("country");
-    const respId = params.get("resp_id");
+  const messageEl = document.getElementById("message");
+  const codeEl = document.getElementById("code");
+  const respIdEl = document.getElementById("respId");
 
-    const messageEl = document.getElementById("message");
-    const codeEl = document.getElementById("code");
-
-    if (!status || !sid || !country) {
-      messageEl.textContent = "❌ Missing parameters. Please check your survey URL.";
-      messageEl.classList.add("error");
-      codeEl.textContent = "";
-    } else {
-      let message = "Unknown status";
-      switch(status) {
-        case "111":
-          message = "✅ Survey Completed";
-          break;
-        case "222":
-          message = "🚫 Disqualified";
-          break;
-        case "333":
-          message = "🚫 Quota Full";
-          break;
-        case "444":
-          message = "🚫 Rejected/Flagged";
-          break;
-      }
-
-      messageEl.textContent = message;
-      codeEl.textContent = `Reward Code: ${status} | SID: ${sid} | Country: ${country}`;
-
-      if (respId) {
-        document.getElementById("respId").textContent = `Respondent ID: ${respId}`;
-      }
+  // Language dictionary
+  const messages = {
+    en: {
+      completed: "✅ Survey Completed",
+      disqualified: "🚫 Disqualified",
+      quotaFull: "🚫 Quota Full",
+      rejected: "🚫 Rejected/Flagged",
+      missingParams: "❌ Missing parameters. Please check your survey URL.",
+      respondent: "Respondent ID",
+      rewardCode: "Reward Code"
+    },
+    hi: {
+      completed: "✅ सर्वेक्षण पूरा हुआ",
+      disqualified: "🚫 अयोग्य",
+      quotaFull: "🚫 कोटा भर गया",
+      rejected: "🚫 अस्वीकृत/झंडी दिखा दी गई",
+      missingParams: "❌ कुछ जानकारियाँ गायब हैं। कृपया लिंक की जांच करें।",
+      respondent: "प्रतिभागी आईडी",
+      rewardCode: "इनाम कोड"
+    },
+    fr: {
+      completed: "✅ Enquête terminée",
+      disqualified: "🚫 Disqualifié",
+      quotaFull: "🚫 Quota atteint",
+      rejected: "🚫 Rejeté / Signalé",
+      missingParams: "❌ Paramètres manquants. Veuillez vérifier l'URL.",
+      respondent: "ID du participant",
+      rewardCode: "Code de récompense"
     }
-  </script>
-</body>
-</html>
+  };
+
+  const t = messages[lang] || messages.en;
+
+  if (!status || !sid || !country) {
+    messageEl.textContent = t.missingParams;
+    messageEl.classList.add("error");
+    codeEl.textContent = "";
+  } else {
+    let message;
+    switch (status) {
+      case "111":
+        message = t.completed;
+        break;
+      case "222":
+        message = t.disqualified;
+        break;
+      case "333":
+        message = t.quotaFull;
+        break;
+      case "444":
+        message = t.rejected;
+        break;
+      default:
+        message = "Unknown status";
+    }
+
+    messageEl.textContent = message;
+    codeEl.textContent = `${t.rewardCode}: ${status} | SID: ${sid} | Country: ${country}`;
+
+    if (respId) {
+      respIdEl.textContent = `${t.respondent}: ${respId}`;
+    }
+  }
+</script>
