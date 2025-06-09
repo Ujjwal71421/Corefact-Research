@@ -53,13 +53,12 @@
     const sid = params.get("sid");
     const country = params.get("country");
     const respId = params.get("resp_id");
-    const lang = params.get("lang") || "en"; // default language
+    const lang = params.get("lang") || "en";
 
     const messageEl = document.getElementById("message");
     const codeEl = document.getElementById("code");
     const respIdEl = document.getElementById("respId");
 
-    // Language dictionary
     const messages = {
       en: {
         completed: "✅ Survey Completed",
@@ -70,14 +69,14 @@
         respondent: "Respondent ID",
         rewardCode: "Reward Code"
       },
-      de: {
-        completed: "✅ Umfrage abgeschlossen",
-        disqualified: "🚫 Disqualifiziert",
-        quotaFull: "🚫 Kontingent voll",
-        rejected: "🚫 Abgelehnt/Markiert",
-        missingParams: "❌ Fehlende Parameter. Bitte überprüfen Sie Ihre Umfrage-URL.",
-        respondent: "Teilnehmer-ID",
-        rewardCode: "Belohnungscode"
+      hi: {
+        completed: "✅ सर्वेक्षण पूरा हुआ",
+        disqualified: "🚫 अयोग्य",
+        quotaFull: "🚫 कोटा भर गया",
+        rejected: "🚫 अस्वीकृत/झंडी दिखा दी गई",
+        missingParams: "❌ कुछ जानकारियाँ गायब हैं। कृपया लिंक की जांच करें।",
+        respondent: "प्रतिभागी आईडी",
+        rewardCode: "इनाम कोड"
       },
       fr: {
         completed: "✅ Enquête terminée",
@@ -88,16 +87,69 @@
         respondent: "ID du participant",
         rewardCode: "Code de récompense"
       },
-      hi: {
-        completed: "✅ सर्वेक्षण पूरा हुआ",
-        disqualified: "🚫 अयोग्य",
-        quotaFull: "🚫 कोटा भर गया",
-        rejected: "🚫 अस्वीकृत/झंडी दिखा दी गई",
-        missingParams: "❌ कुछ जानकारियाँ गायब हैं। कृपया लिंक की जांच करें।",
-        respondent: "प्रतिभागी आईडी",
-        rewardCode: "इनाम कोड"
+      de: {
+        completed: "✅ Umfrage abgeschlossen",
+        disqualified: "🚫 Disqualifiziert",
+        quotaFull: "🚫 Kontingent voll",
+        rejected: "🚫 Abgelehnt/Markiert",
+        missingParams: "❌ Fehlende Parameter. Bitte überprüfen Sie Ihre Umfrage-URL.",
+        respondent: "Teilnehmer-ID",
+        rewardCode: "Belohnungscode"
+      },
+      es: {
+        completed: "✅ Encuesta completada",
+        disqualified: "🚫 Descalificado",
+        quotaFull: "🚫 Cupo lleno",
+        rejected: "🚫 Rechazado/Marcado",
+        missingParams: "❌ Faltan parámetros. Verifique la URL.",
+        respondent: "ID del encuestado",
+        rewardCode: "Código de recompensa"
+      },
+      it: {
+        completed: "✅ Sondaggio completato",
+        disqualified: "🚫 Squalificato",
+        quotaFull: "🚫 Quota piena",
+        rejected: "🚫 Respinto/Segnalato",
+        missingParams: "❌ Parametri mancanti. Controlla il link.",
+        respondent: "ID del partecipante",
+        rewardCode: "Codice premio"
+      },
+      nl: {
+        completed: "✅ Enquête voltooid",
+        disqualified: "🚫 Gediskwalificeerd",
+        quotaFull: "🚫 Quota vol",
+        rejected: "🚫 Afgewezen/Gemarkeerd",
+        missingParams: "❌ Ontbrekende parameters. Controleer de URL.",
+        respondent: "Deelnemer-ID",
+        rewardCode: "Beloningscode"
+      },
+      zh: {
+        completed: "✅ 调查已完成",
+        disqualified: "🚫 不合格",
+        quotaFull: "🚫 配额已满",
+        rejected: "🚫 被拒绝/标记",
+        missingParams: "❌ 缺少参数。请检查链接。",
+        respondent: "受访者ID",
+        rewardCode: "奖励代码"
+      },
+      ja: {
+        completed: "✅ アンケート完了",
+        disqualified: "🚫 失格",
+        quotaFull: "🚫 定員に達しました",
+        rejected: "🚫 拒否/フラグ付き",
+        missingParams: "❌ パラメータが不足しています。URLを確認してください。",
+        respondent: "回答者ID",
+        rewardCode: "報酬コード"
+      },
+      ar: {
+        completed: "✅ تم إكمال الاستبيان",
+        disqualified: "🚫 غير مؤهل",
+        quotaFull: "🚫 الاكتفاء الكامل",
+        rejected: "🚫 مرفوض/معلّم",
+        missingParams: "❌ معلمات مفقودة. يرجى التحقق من الرابط.",
+        respondent: "معرّف المشارك",
+        rewardCode: "رمز المكافأة"
       }
-      // add more languages here if needed
     };
 
     const t = messages[lang] || messages.en;
@@ -128,7 +180,6 @@
 
       messageEl.textContent = message;
       codeEl.textContent = `${t.rewardCode}: ${status} | SID: ${sid} | Country: ${country}`;
-
       if (respId) {
         respIdEl.textContent = `${t.respondent}: ${respId}`;
       }
