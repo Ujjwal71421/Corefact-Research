@@ -2,119 +2,134 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- SEO Meta Tags -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Corefact Research – Market Research & Analytics | Delhi</title>
-  <meta name="description"
-        content="Corefact Research offers end-to-end market research, data analytics, and strategic insights. Founded in 2023 and based in Delhi, we empower brands with actionable intelligence." />
-  <link rel="canonical" href="https://www.corefactresearch.co.in/" />
 
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css" />
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Structured Data for Google -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Corefact Research",
-    "url": "https://www.corefactresearch.co.in/",
-    "logo": "https://www.corefactresearch.co.in/logo.png",
-    "sameAs": [
-      "https://www.linkedin.com/company/corefact-research",
-      "https://twitter.com/CorefactResearch"
-    ],
-    "contactPoint": [{
-      "@type": "ContactPoint",
-      "telephone": "+91-9871421915",
-      "contactType": "customer service",
-      "areaServed": "IN"
-    }]
-  }
-  </script>
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .hero-bg {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    }
+    .client-slider img {
+      max-height: 50px;
+    }
+  </style>
 </head>
-<body>
+<body class="bg-white text-gray-800">
 
-  <!-- HEADER & NAV -->
-  <header>
-    <img src="logo.png" alt="Corefact Research Logo" class="logo">
-    <div class="header-text">
-      <h1>Corefact Research</h1>
-      <p>Turning data into decisions.</p>
-    </div>
+  <!-- NAVIGATION -->
+  <header class="hero-bg text-white py-6 px-6 flex justify-between items-center">
+    <h1 class="text-2xl font-bold">Corefact Research</h1>
+    <nav class="space-x-6 text-lg">
+      <a href="#about" class="hover:text-gray-300">About</a>
+      <a href="#solutions" class="hover:text-gray-300">Solutions</a>
+      <a href="#testimonials" class="hover:text-gray-300">Testimonials</a>
+      <a href="#contact" class="bg-blue-500 px-4 py-2 rounded hover:bg-blue-600">Contact</a>
+    </nav>
   </header>
 
-  <nav>
-    <a href="#about" class="btn">About</a>
-    <a href="#solutions" class="btn">Solutions</a>
-    <a href="#services" class="btn">Services</a>
-    <a href="#testimonials" class="btn">Testimonials</a>
-    <a href="#contact" class="btn primary">Contact Us</a>
-  </nav>
+  <!-- HERO SECTION -->
+  <section class="hero-bg text-center text-white py-20" data-aos="fade-up">
+    <h2 class="text-4xl font-bold mb-4">Turning Data Into Decisions</h2>
+    <p class="text-lg mb-6">Empowering organizations through insights, strategy, and analytics</p>
+    <a href="#contact" class="bg-blue-500 px-6 py-3 rounded text-white hover:bg-blue-600 transition">Get Started</a>
+  </section>
 
-  <!-- EXPANDED ABOUT US (~200 words) -->
-  <section id="about">
-    <h2>About Us</h2>
-    <p>Founded in 2023 and headquartered in Delhi, Corefact Research was born from a shared passion for uncovering the true drivers behind market behavior. Our seasoned team of researchers, data scientists, and industry strategists collaborates closely with brands, institutions, and startups to design and execute end-to-end market research engagements. From survey programming and expert interviews to advanced analytics and predictive modeling, we tailor every project to your unique objectives and audience.</p>
-    <p>Our proprietary online panels, combined with cutting-edge technology platforms, ensure rapid data collection and rigorous quality control. Whether you’re gauging consumer sentiment around a new product, mapping competitive landscapes, or assessing brand health, our approach delivers both depth and agility. At Corefact Research, we believe that every insight—quantitative or qualitative—must translate into strategic advantage. By transforming complex datasets into clear, actionable recommendations, we empower our clients to navigate dynamic markets with confidence and seize opportunities ahead of the curve.</p>
-    <ul class="key-facts">
+  <!-- ABOUT -->
+  <section id="about" class="py-16 px-8 max-w-5xl mx-auto" data-aos="fade-right">
+    <h3 class="text-3xl font-bold mb-6">About Us</h3>
+    <p class="mb-4">Founded in 2023 and based in Delhi, Corefact Research is a modern market research firm specializing in both qualitative and quantitative insights. We combine deep domain knowledge with tech-powered solutions to guide strategic decisions.</p>
+    <ul class="grid grid-cols-2 gap-4 mt-6 text-gray-600">
       <li><strong>Industry:</strong> Market Research & Analytics</li>
       <li><strong>Founded:</strong> 2023</li>
-      <li><strong>Team:</strong> 11–50 specialists</li>
-      <li><strong>HQ:</strong> Delhi, India</li>
+      <li><strong>Team:</strong> 11–50 professionals</li>
+      <li><strong>Headquarters:</strong> Delhi, India</li>
     </ul>
   </section>
 
-  <!-- SOLUTIONS & SERVICES (unchanged) -->
-
-  <!-- CLIENT TESTIMONIALS (~120 words) -->
-  <section id="testimonials">
-    <h2>What Our Clients Say</h2>
-
-    <div class="testimonial">
-      <blockquote>
-        “Corefact Research’s blend of rigorous methodology and hands-on collaboration transformed our concept testing. The market research insights they delivered drove a 30% uplift in campaign ROI and helped us refine our messaging for maximum impact.”
-      </blockquote>
-      <p class="author">— Head of Brand, National Consumer Goods Firm</p>
-    </div>
-
-    <div class="testimonial">
-      <blockquote>
-        “Their real-time BrandPulse™ dashboard gave us instant visibility into shifting consumer sentiment. Armed with those analytics, we adjusted our product roadmap and secured first-mover advantage in a highly competitive category.”
-      </blockquote>
-      <p class="author">— VP of Product, Global Tech Startup</p>
-    </div>
-
-    <div class="testimonial">
-      <blockquote>
-        “From project scoping to deliverable excellence, Corefact Research impressed at every stage. Their MarketVision™ analysis became the foundation for our strategic planning, saving us months of secondary research time.”
-      </blockquote>
-      <p class="author">— Director of Strategy, Regional Financial Services Group</p>
+  <!-- SOLUTIONS -->
+  <section id="solutions" class="py-16 bg-gray-50 px-8" data-aos="fade-left">
+    <h3 class="text-3xl font-bold text-center mb-12">Solutions & Services</h3>
+    <div class="grid md:grid-cols-4 gap-6 text-center">
+      <div><img src="https://img.icons8.com/ios/50/graph.png" class="mx-auto"><p class="mt-2 font-semibold">Market Research</p></div>
+      <div><img src="https://img.icons8.com/ios/50/data-configuration.png" class="mx-auto"><p class="mt-2 font-semibold">Data Analysis</p></div>
+      <div><img src="https://img.icons8.com/ios/50/strategy-board.png" class="mx-auto"><p class="mt-2 font-semibold">Strategy Consulting</p></div>
+      <div><img src="https://img.icons8.com/ios/50/combo-chart.png" class="mx-auto"><p class="mt-2 font-semibold">Analytics Platforms</p></div>
     </div>
   </section>
 
-  <!-- LEADERSHIP & CONTACT (unchanged) -->
-  <section id="leadership">
-    <h2>Leadership Team</h2>
-    <ul class="leadership-list">
-      <li><strong>CEO &amp; Founder:</strong> Ujjwal Thakur</li>
-      <li><strong>Vice-President:</strong> Naveen Singh</li>
-      <li><strong>Director:</strong> Prince Thakur</li>
-    </ul>
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="py-16 px-8 max-w-5xl mx-auto" data-aos="fade-up">
+    <h3 class="text-3xl font-bold text-center mb-12">What Our Clients Say</h3>
+    <div class="space-y-8">
+      <blockquote class="bg-white shadow p-6 rounded">
+        “Their BrandPulse dashboard gave us instant visibility into sentiment shifts. We secured first-mover advantage.”
+        <footer class="mt-2 text-sm font-semibold text-gray-600">— VP, Global Tech Startup</footer>
+      </blockquote>
+      <blockquote class="bg-white shadow p-6 rounded">
+        “Their strategic research saved us 4 months of secondary analysis. We recommend Corefact for mission-critical insights.”
+        <footer class="mt-2 text-sm font-semibold text-gray-600">— Director, Financial Services Group</footer>
+      </blockquote>
+    </div>
   </section>
 
-  <section id="contact">
-    <h2>Get in Touch</h2>
-    <p>Email: <a href="mailto:Ujjwalthakur@corefactresearch.co.in">Ujjwalthakur@corefactresearch.co.in</a></p>
-    <p>Mobile: <a href="tel:+919871421915">+91 98714 21915</a></p>
-    <p>Location: Delhi, India</p>
+  <!-- CLIENT LOGOS -->
+  <section class="bg-white py-10 px-6 text-center" data-aos="zoom-in">
+    <h3 class="text-xl font-semibold mb-4">Trusted By</h3>
+    <div class="flex justify-center items-center gap-8 client-slider">
+      <img src="https://via.placeholder.com/100x50?text=Client+1" />
+      <img src="https://via.placeholder.com/100x50?text=Client+2" />
+      <img src="https://via.placeholder.com/100x50?text=Client+3" />
+      <img src="https://via.placeholder.com/100x50?text=Client+4" />
+    </div>
   </section>
 
-  <footer>
-    <p>© 2025 Corefact Research. All rights reserved.</p>
+  <!-- BLOG/INSIGHTS -->
+  <section class="bg-gray-50 py-16 px-8 max-w-5xl mx-auto" data-aos="fade-up">
+    <h3 class="text-3xl font-bold mb-6">Insights & Thought Leadership</h3>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="bg-white shadow p-4 rounded">
+        <h4 class="font-semibold text-lg">Top Trends in Healthcare Research 2025</h4>
+        <p class="text-gray-600 mt-2">Discover the emerging research techniques and technology innovations transforming the healthcare landscape.</p>
+      </div>
+      <div class="bg-white shadow p-4 rounded">
+        <h4 class="font-semibold text-lg">AI in Market Research: Promise or Hype?</h4>
+        <p class="text-gray-600 mt-2">We explore the balance between automation and human intelligence in designing smarter research.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section id="contact" class="py-16 px-8 max-w-4xl mx-auto" data-aos="fade-up">
+    <h3 class="text-3xl font-bold mb-6">Get in Touch</h3>
+    <form class="grid gap-4">
+      <input type="text" placeholder="Your Name" class="p-3 border border-gray-300 rounded" required>
+      <input type="email" placeholder="Your Email" class="p-3 border border-gray-300 rounded" required>
+      <textarea placeholder="Your Message" class="p-3 border border-gray-300 rounded" rows="4" required></textarea>
+      <button type="submit" class="bg-blue-500 text-white px-6 py-3 rounded hover:bg-blue-600 transition">Submit</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-white text-center py-6">
+    <p>&copy; 2025 Corefact Research. All rights reserved.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
