@@ -29,13 +29,18 @@
 <body class="bg-white text-gray-800">
 
   <!-- NAVIGATION -->
-  <header class="hero-bg text-white py-6 px-6 flex justify-between items-center">
-    <h1 class="text-2xl font-bold">Corefact Research</h1>
-    <nav class="space-x-6 text-lg">
+  <header class="hero-bg text-white py-4 px-6 flex flex-wrap justify-between items-center">
+    <div class="flex items-center space-x-4">
+      <a href="/">
+        <img src="logo.png" alt="Corefact Research Logo" class="h-12 w-auto" />
+      </a>
+      <span class="text-xl font-semibold">Corefact Research</span>
+    </div>
+    <nav class="space-x-4 text-lg mt-4 sm:mt-0">
       <a href="#about" class="hover:text-gray-300">About</a>
       <a href="#solutions" class="hover:text-gray-300">Solutions</a>
       <a href="#testimonials" class="hover:text-gray-300">Testimonials</a>
-      <a href="#contact" class="bg-blue-500 px-4 py-2 rounded hover:bg-blue-600">Contact</a>
+      <a href="#contact" class="bg-blue-500 px-4 py-2 rounded hover:bg-blue-600 transition">Contact</a>
     </nav>
   </header>
 
@@ -114,10 +119,10 @@
   <section id="contact" class="py-16 px-8 max-w-4xl mx-auto" data-aos="fade-up">
     <h3 class="text-3xl font-bold mb-4">Get in Touch</h3>
     <p class="mb-6 text-lg">Contact us at: <a href="mailto:ujjwalthakur@corefactresearch.co.in" class="text-blue-600 underline">ujjwalthakur@corefactresearch.co.in</a></p>
-    <form class="grid gap-4">
-      <input type="text" placeholder="Your Name" class="p-3 border border-gray-300 rounded" required>
-      <input type="email" placeholder="Your Email" class="p-3 border border-gray-300 rounded" required>
-      <textarea placeholder="Your Message" class="p-3 border border-gray-300 rounded" rows="4" required></textarea>
+    <form action="contact.php" method="POST" class="grid gap-4">
+      <input type="text" name="name" placeholder="Your Name" class="p-3 border border-gray-300 rounded" required>
+      <input type="email" name="email" placeholder="Your Email" class="p-3 border border-gray-300 rounded" required>
+      <textarea name="message" placeholder="Your Message" class="p-3 border border-gray-300 rounded" rows="4" required></textarea>
       <button type="submit" class="bg-blue-500 text-white px-6 py-3 rounded hover:bg-blue-600 transition">Submit</button>
     </form>
   </section>
