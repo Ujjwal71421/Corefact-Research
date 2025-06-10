@@ -28,7 +28,6 @@
       font-size: 18px;
       color: #555;
       margin-bottom: 10px;
-      white-space: pre-wrap;
     }
     .powered {
       margin-top: 30px;
@@ -150,51 +149,6 @@
         missingParams: "❌ معلمات مفقودة. يرجى التحقق من الرابط.",
         respondent: "معرّف المشارك",
         rewardCode: "رمز المكافأة"
-      },
-      pt: {  // Portuguese
-        completed: "✅ Pesquisa concluída",
-        disqualified: "🚫 Desqualificado",
-        quotaFull: "🚫 Cota cheia",
-        rejected: "🚫 Rejeitado/Marcado",
-        missingParams: "❌ Parâmetros ausentes. Verifique a URL.",
-        respondent: "ID do respondente",
-        rewardCode: "Código de recompensa"
-      },
-      ru: {  // Russian
-        completed: "✅ Опрос завершен",
-        disqualified: "🚫 Дисквалифицирован",
-        quotaFull: "🚫 Квота заполнена",
-        rejected: "🚫 Отклонено/Помечено",
-        missingParams: "❌ Отсутствуют параметры. Проверьте URL.",
-        respondent: "ID респондента",
-        rewardCode: "Код вознаграждения"
-      },
-      sw: {  // Swahili
-        completed: "✅ Utafiti umekamilika",
-        disqualified: "🚫 Imekataliwa",
-        quotaFull: "🚫 Kiasi kimejaa",
-        rejected: "🚫 Imekataliwa/Kuorodheshwa",
-        missingParams: "❌ Vigezo vinakosekana. Tafadhali angalia URL.",
-        respondent: "Kitambulisho cha mshiriki",
-        rewardCode: "Msimbo wa zawadi"
-      },
-      tl: {  // Tagalog (Filipino)
-        completed: "✅ Natapos ang Survey",
-        disqualified: "🚫 Hindi Kwalipikado",
-        quotaFull: "🚫 Puno na ang Quota",
-        rejected: "🚫 Tinanggihan/Nakatala",
-        missingParams: "❌ May kulang na mga parametro. Pakisuri ang URL.",
-        respondent: "ID ng Respondent",
-        rewardCode: "Code ng Gantimpala"
-      },
-      vi: {  // Vietnamese
-        completed: "✅ Khảo sát hoàn thành",
-        disqualified: "🚫 Bị loại",
-        quotaFull: "🚫 Hết hạn ngạch",
-        rejected: "🚫 Bị từ chối/Đánh dấu",
-        missingParams: "❌ Thiếu tham số. Vui lòng kiểm tra URL.",
-        respondent: "ID người trả lời",
-        rewardCode: "Mã phần thưởng"
       }
     };
 
@@ -221,15 +175,13 @@
           message = t.rejected;
           break;
         default:
-          message = "Unknown status";
+          message = "❓ Unknown status";
       }
 
       messageEl.textContent = message;
       codeEl.textContent = `${t.rewardCode}: ${status} | SID: ${sid} | Country: ${country}`;
       if (respId) {
         respIdEl.textContent = `${t.respondent}: ${respId}`;
-      } else {
-        respIdEl.textContent = "";
       }
     }
   </script>
