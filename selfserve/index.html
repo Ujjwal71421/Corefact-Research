@@ -175,13 +175,13 @@
           message = t.rejected;
           break;
         default:
-          message = "Unknown status";
+          message = "❓ Unknown status";
       }
 
       messageEl.textContent = message;
-      codeEl.textContent = ${t.rewardCode}: ${status} | SID: ${sid} | Country: ${country};
+      codeEl.textContent = `${t.rewardCode}: ${status} | SID: ${sid} | Country: ${country}`;
       if (respId) {
-        respIdEl.textContent = ${t.respondent}: ${respId};
+        respIdEl.textContent = `${t.respondent}: ${respId}`;
       }
     }
   </script>
