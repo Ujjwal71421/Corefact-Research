@@ -6,7 +6,7 @@
   <title>Survey Status - Corefact Research</title>
   <style>
     body {
-      font-family: 'Segoe UI', Arial, sans-serif;
+      font-family: Arial, sans-serif;
       background: #f4f6f8;
       color: #333;
       text-align: center;
@@ -62,7 +62,7 @@
       completed: "✅ Survey Completed",
       disqualified: "🚫 Disqualified",
       quotaFull: "🚫 Quota Full",
-      rejected: "🚫 Rejected/Flagged",
+      qualityTerm: "🚫 Quality Termination",
       missingParams: "❌ Missing parameters. Please check your survey URL.",
       respondent: "Respondent ID",
       rewardCode: "Reward Code"
@@ -84,7 +84,7 @@
           message = messages.quotaFull;
           break;
         case "444":
-          message = messages.rejected;
+          message = messages.qualityTerm;
           break;
         default:
           message = "❓ Unknown status";
