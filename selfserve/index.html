@@ -6,7 +6,7 @@
   <title>Survey Status - Corefact Research</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Arial, sans-serif;
       background: #f4f6f8;
       color: #333;
       text-align: center;
@@ -18,7 +18,7 @@
       margin: auto;
       padding: 40px;
       border-radius: 15px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     }
     .status {
       font-size: 24px;
@@ -53,198 +53,47 @@
     const sid = params.get("sid");
     const country = params.get("country");
     const respId = params.get("resp_id");
-    const lang = params.get("lang") || "en";
 
     const messageEl = document.getElementById("message");
     const codeEl = document.getElementById("code");
     const respIdEl = document.getElementById("respId");
 
     const messages = {
-      en: {
-        completed: "✅ Survey Completed",
-        disqualified: "🚫 Disqualified",
-        quotaFull: "🚫 Quota Full",
-        rejected: "🚫 Rejected/Flagged",
-        missingParams: "❌ Missing parameters. Please check your survey URL.",
-        respondent: "Respondent ID",
-        rewardCode: "Reward Code"
-      },
-      hi: {
-        completed: "✅ सर्वेक्षण पूरा हुआ",
-        disqualified: "🚫 अयोग्य",
-        quotaFull: "🚫 कोटा भर गया",
-        rejected: "🚫 अस्वीकृत/झंडी दिखा दी गई",
-        missingParams: "❌ कुछ जानकारियाँ गायब हैं। कृपया लिंक की जांच करें।",
-        respondent: "प्रतिभागी आईडी",
-        rewardCode: "इनाम कोड"
-      },
-      fr: {
-        completed: "✅ Enquête terminée",
-        disqualified: "🚫 Disqualifié",
-        quotaFull: "🚫 Quota atteint",
-        rejected: "🚫 Rejeté / Signalé",
-        missingParams: "❌ Paramètres manquants. Veuillez vérifier l'URL.",
-        respondent: "ID du participant",
-        rewardCode: "Code de récompense"
-      },
-      de: {
-        completed: "✅ Umfrage abgeschlossen",
-        disqualified: "🚫 Disqualifiziert",
-        quotaFull: "🚫 Kontingent voll",
-        rejected: "🚫 Abgelehnt/Markiert",
-        missingParams: "❌ Fehlende Parameter. Bitte überprüfen Sie Ihre Umfrage-URL.",
-        respondent: "Teilnehmer-ID",
-        rewardCode: "Belohnungscode"
-      },
-      es: {
-        completed: "✅ Encuesta completada",
-        disqualified: "🚫 Descalificado",
-        quotaFull: "🚫 Cupo lleno",
-        rejected: "🚫 Rechazado/Marcado",
-        missingParams: "❌ Faltan parámetros. Verifique la URL.",
-        respondent: "ID del encuestado",
-        rewardCode: "Código de recompensa"
-      },
-      it: {
-        completed: "✅ Sondaggio completato",
-        disqualified: "🚫 Squalificato",
-        quotaFull: "🚫 Quota piena",
-        rejected: "🚫 Respinto/Segnalato",
-        missingParams: "❌ Parametri mancanti. Controlla il link.",
-        respondent: "ID del partecipante",
-        rewardCode: "Codice premio"
-      },
-      nl: {
-        completed: "✅ Enquête voltooid",
-        disqualified: "🚫 Gediskwalificeerd",
-        quotaFull: "🚫 Quota vol",
-        rejected: "🚫 Afgewezen/Gemarkeerd",
-        missingParams: "❌ Ontbrekende parameters. Controleer de URL.",
-        respondent: "Deelnemer-ID",
-        rewardCode: "Beloningscode"
-      },
-      zh: {
-        completed: "✅ 调查已完成",
-        disqualified: "🚫 不合格",
-        quotaFull: "🚫 配额已满",
-        rejected: "🚫 被拒绝/标记",
-        missingParams: "❌ 缺少参数。请检查链接。",
-        respondent: "受访者ID",
-        rewardCode: "奖励代码"
-      },
-      ja: {
-        completed: "✅ アンケート完了",
-        disqualified: "🚫 失格",
-        quotaFull: "🚫 定員に達しました",
-        rejected: "🚫 拒否/フラグ付き",
-        missingParams: "❌ パラメータが不足しています。URLを確認してください。",
-        respondent: "回答者ID",
-        rewardCode: "報酬コード"
-      },
-      ar: {
-        completed: "✅ تم إكمال الاستبيان",
-        disqualified: "🚫 غير مؤهل",
-        quotaFull: "🚫 الاكتفاء الكامل",
-        rejected: "🚫 مرفوض/معلّم",
-        missingParams: "❌ معلمات مفقودة. يرجى التحقق من الرابط.",
-        respondent: "معرّف المشارك",
-        rewardCode: "رمز المكافأة"
-      },
-      pa: {
-        completed: "✅ ਸਰਵੇਖਣ ਪੂਰਾ ਹੋਇਆ",
-        disqualified: "🚫 ਅਯੋਗ",
-        quotaFull: "🚫 ਕੋਟਾ ਭਰ ਚੁੱਕਾ ਹੈ",
-        rejected: "🚫 ਅਸਵੀਕਾਰ ਕੀਤਾ ਗਿਆ/ਝੰਡਾ ਲਗਾਇਆ ਗਿਆ",
-        missingParams: "❌ ਲੋੜੀਂਦੇ ਪੈਰਾਮੀਟਰ ਗਾਇਬ ਹਨ। ਕਿਰਪਾ ਕਰਕੇ ਲਿੰਕ ਦੀ ਜਾਂਚ ਕਰੋ।",
-        respondent: "ਪ੍ਰਤਭਾਗੀ ID",
-        rewardCode: "ਇਨਾਮ ਕੋਡ"
-      },
-      cs: {
-        completed: "✅ Průzkum dokončen",
-        disqualified: "🚫 Diskvalifikován",
-        quotaFull: "🚫 Kvóta naplněna",
-        rejected: "🚫 Zamítnuto/Označeno",
-        missingParams: "❌ Chybějící parametry. Zkontrolujte prosím URL.",
-        respondent: "ID respondenta",
-        rewardCode: "Kód odměny"
-      },
-      hu: {
-        completed: "✅ Felmérés befejezve",
-        disqualified: "🚫 Kizárva",
-        quotaFull: "🚫 Kvóta betelt",
-        rejected: "🚫 Elutasítva/Megjelölve",
-        missingParams: "❌ Hiányzó paraméterek. Kérjük, ellenőrizze az URL-t.",
-        respondent: "Válaszadó azonosító",
-        rewardCode: "Jutalomkód"
-      },
-      pl: {
-        completed: "✅ Ankieta zakończona",
-        disqualified: "🚫 Zdyskwalifikowany",
-        quotaFull: "🚫 Limit osiągnięty",
-        rejected: "🚫 Odrzucony/Oznaczony",
-        missingParams: "❌ Brakuje parametrów. Sprawdź URL.",
-        respondent: "ID respondenta",
-        rewardCode: "Kod nagrody"
-      },
-      no: {
-        completed: "✅ Undersøkelse fullført",
-        disqualified: "🚫 Diskvalifisert",
-        quotaFull: "🚫 Kvoten er full",
-        rejected: "🚫 Avvist/Flagget",
-        missingParams: "❌ Manglende parametere. Sjekk URL-en.",
-        respondent: "Respondent-ID",
-        rewardCode: "Belønningskode"
-      },
-      sv: {
-        completed: "✅ Undersökning slutförd",
-        disqualified: "🚫 Diskvalificerad",
-        quotaFull: "🚫 Kvoten är fylld",
-        rejected: "🚫 Avvisad/Flaggad",
-        missingParams: "❌ Saknade parametrar. Kontrollera länken.",
-        respondent: "Respondent-ID",
-        rewardCode: "Belöningskod"
-      },
-      pt: {
-        completed: "✅ Pesquisa concluída",
-        disqualified: "🚫 Desqualificado",
-        quotaFull: "🚫 Cota cheia",
-        rejected: "🚫 Rejeitado/Sinalizado",
-        missingParams: "❌ Parâmetros ausentes. Verifique o link.",
-        respondent: "ID do participante",
-        rewardCode: "Código de recompensa"
-      }
+      completed: "✅ Survey Completed",
+      disqualified: "🚫 Disqualified",
+      quotaFull: "🚫 Quota Full",
+      rejected: "🚫 Rejected/Flagged",
+      missingParams: "❌ Missing parameters. Please check your survey URL.",
+      respondent: "Respondent ID",
+      rewardCode: "Reward Code"
     };
 
-    const t = messages[lang] || messages.en;
-
     if (!status || !sid || !country) {
-      messageEl.textContent = t.missingParams;
+      messageEl.textContent = messages.missingParams;
       messageEl.classList.add("error");
-      codeEl.textContent = "";
-      respIdEl.textContent = "";
     } else {
       let message;
       switch (status) {
         case "111":
-          message = t.completed;
+          message = messages.completed;
           break;
         case "222":
-          message = t.disqualified;
+          message = messages.disqualified;
           break;
         case "333":
-          message = t.quotaFull;
+          message = messages.quotaFull;
           break;
         case "444":
-          message = t.rejected;
+          message = messages.rejected;
           break;
         default:
           message = "❓ Unknown status";
       }
 
       messageEl.textContent = message;
-      codeEl.textContent = `${t.rewardCode}: ${status} | SID: ${sid} | Country: ${country}`;
+      codeEl.textContent = `${messages.rewardCode}: ${status} | SID: ${sid} | Country: ${country}`;
       if (respId) {
-        respIdEl.textContent = `${t.respondent}: ${respId}`;
+        respIdEl.textContent = `${messages.respondent}: ${respId}`;
       }
     }
   </script>
