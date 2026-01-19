@@ -4,36 +4,37 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Corefact Research | CATI & Online Data Collection</title>
-  <meta name="description" content="Corefact Research provides high-quality CATI, B2B, B2C & Healthcare research data collection with strong QA and fast turnaround." />
-  <link rel="stylesheet" href="style.css"/>
+  <meta name="description" content="Corefact Research provides high-quality CATI, Online Surveys, B2B and Healthcare data collection with strict QA and fast turnaround." />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css"/>
 </head>
 
 <body>
 
   <!-- NAV -->
-  <header class="nav">
+  <header class="navbar">
     <div class="container nav-inner">
-      <div class="brand">
-        <!-- Replace with your logo if needed -->
-        <!-- <img src="assets/logo.png" alt="Corefact Research Logo" class="logo"/> -->
-        <div class="brand-text">
-          <span class="brand-name">Corefact Research</span>
-          <span class="brand-tag">Market Research Data Collection</span>
+      <a class="brand" href="#">
+        <div class="logoMark">C</div>
+        <div class="brandText">
+          <div class="brandTitle">Corefact Research</div>
+          <div class="brandSub">Market Research Data Collection</div>
         </div>
-      </div>
+      </a>
 
-      <nav class="nav-links" id="navLinks">
+      <nav class="navlinks" id="navlinks">
         <a href="#services">Services</a>
         <a href="#process">Process</a>
         <a href="#cases">Case Studies</a>
         <a href="#testimonials">Testimonials</a>
-        <a href="#contact" class="btn btn-sm">Request a Quote</a>
+        <a href="#contact" class="btn btnSmall">Request a Quote</a>
       </nav>
 
-      <button class="hamburger" id="hamburger" aria-label="Menu">
+      <button class="menuBtn" id="menuBtn" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -41,76 +42,94 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-left">
-        <div class="pill">Global Data Collection • CATI • B2B • B2C • Healthcare</div>
-        <h1>High-Quality CATI & Online Data Collection for Market Research Agencies Worldwide.</h1>
-        <p>
-          Trusted sampling, strict quality controls, and fast turnaround.
-          From consumer insights to niche B2B and Healthcare professionals — we deliver the right respondents at the right time.
+    <div class="container heroGrid">
+      <div class="heroLeft reveal">
+        <div class="pill">🌍 Global Data Collection • CATI • B2B • B2C • Healthcare</div>
+
+        <h1>
+          High-Quality CATI & Online Data Collection for Market Research Agencies Worldwide.
+        </h1>
+
+        <p class="lead">
+          Trusted sampling, strict quality controls, and fast turnaround. From consumer insights to niche B2B and Healthcare professionals — we deliver the right respondents at the right time.
         </p>
 
-        <div class="hero-cta">
+        <div class="ctaRow">
           <a class="btn" href="#contact">Request a Quote</a>
-          <a class="btn btn-outline" href="#cases">View Case Studies</a>
+          <a class="btn btnOutline" href="#cases">View Case Studies</a>
         </div>
 
-        <div class="hero-stats">
-          <div class="stat">
-            <span class="stat-num">95%+</span>
-            <span class="stat-label">Quality Score</span>
+        <div class="stats">
+          <div class="statCard">
+            <div class="statNum">95%+</div>
+            <div class="statLabel">Quality Score</div>
           </div>
-          <div class="stat">
-            <span class="stat-num">24–48h</span>
-            <span class="stat-label">Feasibility Response</span>
+          <div class="statCard">
+            <div class="statNum">24–48h</div>
+            <div class="statLabel">Feasibility Response</div>
           </div>
-          <div class="stat">
-            <span class="stat-num">20+</span>
-            <span class="stat-label">Countries Covered</span>
+          <div class="statCard">
+            <div class="statNum">20+</div>
+            <div class="statLabel">Countries Covered</div>
           </div>
         </div>
 
-        <div class="hero-trust">
-          <span class="muted">Trusted by research agencies, consultants, and brands.</span>
-          <div class="logos">
-            <div class="logo-box">Agency</div>
-            <div class="logo-box">Consulting</div>
-            <div class="logo-box">Brand</div>
-            <div class="logo-box">Insights</div>
+        <div class="trusted">
+          <div class="muted">Trusted by research agencies, consultants, and brands.</div>
+          <div class="logoRow">
+            <span class="chip">Agency</span>
+            <span class="chip">Consulting</span>
+            <span class="chip">Brands</span>
+            <span class="chip">Insights</span>
           </div>
         </div>
       </div>
 
-      <div class="hero-right">
-        <div class="glass-card">
-          <h3>Get a Quote in 2 Minutes</h3>
-          <p class="muted">Tell us your target audience and sample size — we’ll reply fast.</p>
+      <div class="heroRight reveal">
+        <div class="quoteCard">
+          <div class="quoteTop">
+            <div class="quoteIcon">⚡</div>
+            <div>
+              <h3>Get a Quote in 2 Minutes</h3>
+              <p class="muted">Share your target audience and sample size — we’ll reply fast.</p>
+            </div>
+          </div>
 
-          <form id="quickQuote">
-            <label>Study Type</label>
-            <select required>
-              <option value="">Select</option>
-              <option>CATI</option>
-              <option>Online Surveys</option>
-              <option>B2B Sampling</option>
-              <option>Healthcare / HCP</option>
-              <option>Qual Recruitment</option>
-            </select>
+          <form id="quickQuote" class="form">
+            <div class="field">
+              <label>Study Type</label>
+              <select required>
+                <option value="">Select</option>
+                <option>CATI</option>
+                <option>Online Surveys</option>
+                <option>B2B Sampling</option>
+                <option>Healthcare / HCP</option>
+                <option>Qual Recruitment</option>
+              </select>
+            </div>
 
-            <label>Geography</label>
-            <input type="text" placeholder="India / US / UK / Multi-country" required />
+            <div class="field">
+              <label>Geography</label>
+              <input type="text" placeholder="India / US / UK / Multi-country" required>
+            </div>
 
-            <label>Sample Size</label>
-            <input type="number" placeholder="e.g., 300" required />
+            <div class="field">
+              <label>Sample Size</label>
+              <input type="number" placeholder="e.g., 300" required>
+            </div>
 
-            <button class="btn btn-full" type="submit">Submit</button>
-            <small class="muted">No spam. We respond within 24–48 hours.</small>
+            <button class="btn btnFull" type="submit">Submit</button>
+            <div class="hint">
+              ✅ 10-step QA checks + live monitoring <br/>
+              ⏱️ Response within 24–48 hours
+            </div>
           </form>
         </div>
 
-        <div class="floating-note">
+        <div class="floatingBadge">
           <span class="dot"></span>
-          <span>10-step QA checks + live monitoring</span>
+          <b>Premium QA</b>
+          <span class="muted">Validation + Monitoring</span>
         </div>
       </div>
     </div>
@@ -119,69 +138,75 @@
   <!-- SERVICES -->
   <section class="section" id="services">
     <div class="container">
-      <div class="section-head">
+      <div class="sectionHead reveal">
         <h2>Services designed for speed, quality, and reliability</h2>
         <p class="muted">We support end-to-end fieldwork with strong validation and data integrity.</p>
       </div>
 
-      <div class="cards">
+      <div class="grid3">
         <div class="card reveal">
+          <div class="cardIcon">📞</div>
           <h3>CATI Data Collection</h3>
           <p>Professional interviewers, monitored calls, quota control, and daily reporting.</p>
           <ul>
-            <li>Monitoring & call validation</li>
-            <li>Fast turnaround</li>
+            <li>Call monitoring & validation</li>
             <li>Complex quotas supported</li>
+            <li>On-time delivery</li>
           </ul>
         </div>
 
         <div class="card reveal">
+          <div class="cardIcon">🧠</div>
           <h3>Online Surveys & Panels</h3>
-          <p>Verified panel partners and fraud prevention measures to ensure real respondents.</p>
+          <p>Verified sample sources with fraud prevention and quality checks.</p>
           <ul>
             <li>Bot & duplicate detection</li>
             <li>Speed checks & QC flags</li>
-            <li>Multi-market coverage</li>
+            <li>Multi-market reach</li>
           </ul>
         </div>
 
         <div class="card reveal">
+          <div class="cardIcon">🏢</div>
           <h3>B2B Sampling</h3>
-          <p>Reach niche professionals and decision makers across industries and functions.</p>
+          <p>Hard-to-reach professionals, decision makers, and niche audiences.</p>
           <ul>
-            <li>Job function targeting</li>
-            <li>Decision maker access</li>
-            <li>Hard-to-reach audiences</li>
+            <li>Role-based targeting</li>
+            <li>Strict validation</li>
+            <li>Tight quotas supported</li>
           </ul>
         </div>
 
         <div class="card reveal">
+          <div class="cardIcon">🩺</div>
           <h3>Healthcare (HCP)</h3>
-          <p>Physicians, specialists, nurses, and healthcare stakeholders — verified recruitment.</p>
+          <p>Physicians, specialists, nurses and healthcare stakeholders — verified.</p>
           <ul>
-            <li>Specialty-based targeting</li>
-            <li>License verification (where available)</li>
-            <li>High data accuracy</li>
+            <li>Specialty targeting</li>
+            <li>Verification (where possible)</li>
+            <li>High accuracy delivery</li>
           </ul>
         </div>
 
         <div class="card reveal">
-          <h3>Qualitative Recruitment</h3>
-          <p>Recruit participants for IDIs, FGDs, online communities, and diary studies.</p>
+          <div class="cardIcon">👥</div>
+          <h3>Qual Recruitment</h3>
+          <p>Recruit participants for IDIs, FGDs, communities and diary studies.</p>
           <ul>
-            <li>Screening & validation</li>
+            <li>Screening + validation</li>
             <li>Attendance confirmation</li>
             <li>Incentive coordination</li>
           </ul>
         </div>
 
         <div class="card reveal">
+          <div class="cardIcon">🧩</div>
           <h3>Survey Programming</h3>
-          <p>Questionnaire programming, hosting, testing, and smooth respondent experience.</p>
+          <p>Programming, hosting, testing and smooth respondent experience.</p>
           <ul>
-            <li>Logic & quota setup</li>
-            <li>Device optimization</li>
-            <li>Pilot + launch support</li>
+            <li>Logic setup + quota</li>
+            <li>Device optimized</li>
+            <li>Pilot launch support</li>
           </ul>
         </div>
       </div>
@@ -189,47 +214,47 @@
   </section>
 
   <!-- PROCESS -->
-  <section class="section alt" id="process">
+  <section class="section sectionAlt" id="process">
     <div class="container">
-      <div class="section-head">
+      <div class="sectionHead reveal">
         <h2>How we work</h2>
         <p class="muted">A consistent process that protects timelines and data quality.</p>
       </div>
 
       <div class="timeline">
         <div class="step reveal">
-          <span class="step-no">01</span>
+          <div class="stepNo">01</div>
           <div>
             <h3>Requirement Intake</h3>
-            <p>We understand the audience, geography, LOI, and incidence rate requirements.</p>
+            <p>Understand audience, geography, LOI, incidence, and quotas.</p>
           </div>
         </div>
         <div class="step reveal">
-          <span class="step-no">02</span>
+          <div class="stepNo">02</div>
           <div>
             <h3>Feasibility + Quotas</h3>
-            <p>We confirm feasibility and finalize quota structure with clear delivery plan.</p>
+            <p>Feasibility confirmation + quota finalization with a clear plan.</p>
           </div>
         </div>
         <div class="step reveal">
-          <span class="step-no">03</span>
+          <div class="stepNo">03</div>
           <div>
             <h3>Soft Launch</h3>
-            <p>We test survey flow and validate early data before full-scale fieldwork.</p>
+            <p>Early validation and checks before scaling fieldwork.</p>
           </div>
         </div>
         <div class="step reveal">
-          <span class="step-no">04</span>
+          <div class="stepNo">04</div>
           <div>
             <h3>Live Fieldwork + Reporting</h3>
-            <p>Daily updates, quota monitoring, and quality checks through the project.</p>
+            <p>Daily updates, live quota monitoring, QA checks.</p>
           </div>
         </div>
         <div class="step reveal">
-          <span class="step-no">05</span>
+          <div class="stepNo">05</div>
           <div>
             <h3>QC + Delivery</h3>
-            <p>We deliver clean data with validations, open ends (if any), and audit trail.</p>
+            <p>Clean dataset delivery with validations and audit trail.</p>
           </div>
         </div>
       </div>
@@ -239,51 +264,48 @@
   <!-- CASE STUDIES -->
   <section class="section" id="cases">
     <div class="container">
-      <div class="section-head">
+      <div class="sectionHead reveal">
         <h2>Case studies</h2>
-        <p class="muted">A snapshot of execution strength across different audiences and timelines.</p>
+        <p class="muted">A snapshot of execution strength across audiences & timelines.</p>
       </div>
 
-      <div class="case-grid">
+      <div class="grid3">
         <div class="case reveal">
-          <div class="case-top">
-            <span class="badge">CATI</span>
-            <span class="badge badge-outline">India</span>
+          <div class="caseTags">
+            <span class="tag">CATI</span><span class="tag tagGhost">India</span>
           </div>
           <h3>FMCG Brand Tracking</h3>
           <p class="muted">n=1200 • LOI 18 min • Multi-city quotas</p>
           <ul>
-            <li>Daily reporting and quota control</li>
-            <li>Call monitoring + validations</li>
+            <li>Daily reporting + quota management</li>
+            <li>Call validation & monitoring</li>
             <li>On-time delivery</li>
           </ul>
         </div>
 
         <div class="case reveal">
-          <div class="case-top">
-            <span class="badge">B2B</span>
-            <span class="badge badge-outline">US</span>
+          <div class="caseTags">
+            <span class="tag">B2B</span><span class="tag tagGhost">US</span>
           </div>
           <h3>IT Decision Makers Study</h3>
           <p class="muted">n=200 • Hard-to-reach roles</p>
           <ul>
-            <li>Strict targeting by job role</li>
+            <li>Role-based targeting</li>
             <li>High validation success rate</li>
             <li>Complex quota execution</li>
           </ul>
         </div>
 
         <div class="case reveal">
-          <div class="case-top">
-            <span class="badge">Healthcare</span>
-            <span class="badge badge-outline">UK</span>
+          <div class="caseTags">
+            <span class="tag">Healthcare</span><span class="tag tagGhost">UK</span>
           </div>
           <h3>Physician Specialty Survey</h3>
-          <p class="muted">n=150 • Specialist recruitment</p>
+          <p class="muted">n=150 • Specialty recruitment</p>
           <ul>
-            <li>Specialty validation</li>
-            <li>Speeding + logic QC</li>
-            <li>Clean data output</li>
+            <li>Specialty verification</li>
+            <li>QC checks</li>
+            <li>Clean data delivery</li>
           </ul>
         </div>
       </div>
@@ -291,41 +313,43 @@
   </section>
 
   <!-- TESTIMONIALS -->
-  <section class="section alt" id="testimonials">
+  <section class="section sectionAlt" id="testimonials">
     <div class="container">
-      <div class="section-head">
+      <div class="sectionHead reveal">
         <h2>What our partners say</h2>
         <p class="muted">Quality, timelines, and communication — consistently delivered.</p>
       </div>
 
-      <div class="test-grid">
+      <div class="grid3">
         <div class="test reveal">
           <p>“Very reliable team. Great communication and strong quality checks on every project.”</p>
           <div class="who">
-            <span class="avatar">A</span>
+            <div class="avatar">A</div>
             <div>
               <b>Research Director</b>
-              <span class="muted">Global Insights Agency</span>
+              <div class="muted small">Global Insights Agency</div>
             </div>
           </div>
         </div>
+
         <div class="test reveal">
-          <p>“They handled complex quotas smoothly and delivered on time. Recommended for CATI.”</p>
+          <p>“Handled complex quotas smoothly and delivered on time. Strong CATI capability.”</p>
           <div class="who">
-            <span class="avatar">R</span>
+            <div class="avatar">R</div>
             <div>
               <b>Project Manager</b>
-              <span class="muted">Market Research Firm</span>
+              <div class="muted small">Market Research Firm</div>
             </div>
           </div>
         </div>
+
         <div class="test reveal">
           <p>“Strong respondent validation for B2B. Great experience working together.”</p>
           <div class="who">
-            <span class="avatar">S</span>
+            <div class="avatar">S</div>
             <div>
               <b>Consultant</b>
-              <span class="muted">Strategy Consulting</span>
+              <div class="muted small">Strategy Consulting</div>
             </div>
           </div>
         </div>
@@ -335,66 +359,51 @@
 
   <!-- CONTACT -->
   <section class="section" id="contact">
-    <div class="container contact-grid">
-      <div class="contact-left">
+    <div class="container contactGrid">
+      <div class="contactLeft reveal">
         <h2>Let’s discuss your project</h2>
-        <p class="muted">
-          Share target audience, geography, sample size, and timeline.
-          We’ll respond quickly with feasibility and a quote.
-        </p>
+        <p class="muted">Share audience, geography, sample size, and timeline — we’ll reply with feasibility.</p>
 
-        <div class="contact-box">
-          <div class="info">
-            <span class="label">Website</span>
-            <span>www.corefactresearch.co.in</span>
+        <div class="contactCard">
+          <div class="row">
+            <span class="k">Website</span>
+            <span class="v">www.corefactresearch.co.in</span>
           </div>
-          <div class="info">
-            <span class="label">Email</span>
-            <span>ujjwalthakur@corefactresearch.co.in</span>
+          <div class="row">
+            <span class="k">Email</span>
+            <span class="v">ujjwalthakur@corefactresearch.co.in</span>
           </div>
-          <div class="info">
-            <span class="label">Phone</span>
-            <span>+91 9871421915</span>
+          <div class="row">
+            <span class="k">Phone</span>
+            <span class="v">+91 9911146165</span>
           </div>
         </div>
 
-        <a class="btn btn-outline" target="_blank"
-           href="https://wa.me/919871421915?text=Hello%20Corefact%20Research%2C%20I%20want%20a%20quote%20for%20my%20market%20research%20project.">
+        <a class="btn btnOutline"
+           target="_blank"
+           href="https://wa.me/919911146165?text=Hello%20Corefact%20Research%2C%20I%20want%20a%20quote%20for%20my%20market%20research%20project.">
           WhatsApp Now
         </a>
       </div>
 
-      <div class="contact-right">
-        <form class="form-card" id="contactForm">
+      <div class="contactRight reveal">
+        <form class="contactForm" id="contactForm">
           <h3>Request a Quote</h3>
 
-          <div class="grid-2">
-            <div>
-              <label>Full Name</label>
-              <input type="text" placeholder="Your name" required/>
-            </div>
-            <div>
-              <label>Company</label>
-              <input type="text" placeholder="Company name" required/>
-            </div>
+          <div class="two">
+            <input type="text" placeholder="Full Name" required />
+            <input type="text" placeholder="Company Name" required />
           </div>
 
-          <div class="grid-2">
-            <div>
-              <label>Email</label>
-              <input type="email" placeholder="you@company.com" required/>
-            </div>
-            <div>
-              <label>Phone</label>
-              <input type="text" placeholder="+91 XXXXX XXXXX" />
-            </div>
+          <div class="two">
+            <input type="email" placeholder="Email" required />
+            <input type="text" placeholder="Phone (optional)" />
           </div>
 
-          <label>Project Details</label>
-          <textarea rows="5" placeholder="Audience, geography, sample size, LOI, and timeline..." required></textarea>
+          <textarea rows="5" placeholder="Audience, geography, sample size, LOI & timeline..." required></textarea>
 
-          <button type="submit" class="btn btn-full">Send Request</button>
-          <small class="muted">We respond within 24–48 hours.</small>
+          <button class="btn btnFull" type="submit">Send Request</button>
+          <div class="muted small">We respond within 24–48 hours.</div>
         </form>
       </div>
     </div>
@@ -402,12 +411,12 @@
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="container footer-inner">
+    <div class="container footerInner">
       <div>
         <b>Corefact Research</b>
-        <p class="muted">CATI • Online • B2B • Healthcare</p>
+        <div class="muted small">CATI • Online • B2B • Healthcare</div>
       </div>
-      <div class="muted">© <span id="year"></span> Corefact Research. All rights reserved.</div>
+      <div class="muted small">© <span id="year"></span> Corefact Research. All rights reserved.</div>
     </div>
   </footer>
 
