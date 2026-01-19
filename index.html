@@ -2,141 +2,415 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Corefact Research – Market Research & Analytics | Delhi</title>
-
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- AOS Animation -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-    .hero-bg {
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-    }
-    .client-slider img {
-      max-height: 50px;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Corefact Research | CATI & Online Data Collection</title>
+  <meta name="description" content="Corefact Research provides high-quality CATI, B2B, B2C & Healthcare research data collection with strong QA and fast turnaround." />
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body class="bg-white text-gray-800">
 
-  <!-- NAVIGATION -->
-  <header class="hero-bg text-white py-4 px-6 flex flex-wrap justify-between items-center">
-    <div class="flex items-center space-x-4">
-      <a href="/">
-        <img src="logo.png" alt="Corefact Research Logo" class="h-12 w-auto" />
-      </a>
-      <span class="text-xl font-semibold">Corefact Research</span>
+<body>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="brand">
+        <!-- Replace with your logo if needed -->
+        <!-- <img src="assets/logo.png" alt="Corefact Research Logo" class="logo"/> -->
+        <div class="brand-text">
+          <span class="brand-name">Corefact Research</span>
+          <span class="brand-tag">Market Research Data Collection</span>
+        </div>
+      </div>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#cases">Case Studies</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact" class="btn btn-sm">Request a Quote</a>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-    <nav class="space-x-4 text-lg mt-4 sm:mt-0">
-      <a href="#about" class="hover:text-gray-300">About</a>
-      <a href="#solutions" class="hover:text-gray-300">Solutions</a>
-      <a href="#testimonials" class="hover:text-gray-300">Testimonials</a>
-      <a href="#contact" class="bg-blue-500 px-4 py-2 rounded hover:bg-blue-600 transition">Contact</a>
-    </nav>
   </header>
 
-  <!-- HERO SECTION -->
-  <section class="hero-bg text-center text-white py-20" data-aos="fade-up">
-    <h2 class="text-4xl font-bold mb-4">Turning Data Into Decisions</h2>
-    <p class="text-lg mb-6">Empowering organizations through insights, strategy, and analytics</p>
-    <a href="#contact" class="bg-blue-500 px-6 py-3 rounded text-white hover:bg-blue-600 transition">Get Started</a>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-left">
+        <div class="pill">Global Data Collection • CATI • B2B • B2C • Healthcare</div>
+        <h1>High-Quality CATI & Online Data Collection for Market Research Agencies Worldwide.</h1>
+        <p>
+          Trusted sampling, strict quality controls, and fast turnaround.
+          From consumer insights to niche B2B and Healthcare professionals — we deliver the right respondents at the right time.
+        </p>
+
+        <div class="hero-cta">
+          <a class="btn" href="#contact">Request a Quote</a>
+          <a class="btn btn-outline" href="#cases">View Case Studies</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-num">95%+</span>
+            <span class="stat-label">Quality Score</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">24–48h</span>
+            <span class="stat-label">Feasibility Response</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">20+</span>
+            <span class="stat-label">Countries Covered</span>
+          </div>
+        </div>
+
+        <div class="hero-trust">
+          <span class="muted">Trusted by research agencies, consultants, and brands.</span>
+          <div class="logos">
+            <div class="logo-box">Agency</div>
+            <div class="logo-box">Consulting</div>
+            <div class="logo-box">Brand</div>
+            <div class="logo-box">Insights</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="glass-card">
+          <h3>Get a Quote in 2 Minutes</h3>
+          <p class="muted">Tell us your target audience and sample size — we’ll reply fast.</p>
+
+          <form id="quickQuote">
+            <label>Study Type</label>
+            <select required>
+              <option value="">Select</option>
+              <option>CATI</option>
+              <option>Online Surveys</option>
+              <option>B2B Sampling</option>
+              <option>Healthcare / HCP</option>
+              <option>Qual Recruitment</option>
+            </select>
+
+            <label>Geography</label>
+            <input type="text" placeholder="India / US / UK / Multi-country" required />
+
+            <label>Sample Size</label>
+            <input type="number" placeholder="e.g., 300" required />
+
+            <button class="btn btn-full" type="submit">Submit</button>
+            <small class="muted">No spam. We respond within 24–48 hours.</small>
+          </form>
+        </div>
+
+        <div class="floating-note">
+          <span class="dot"></span>
+          <span>10-step QA checks + live monitoring</span>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- ABOUT -->
-  <section id="about" class="py-16 px-8 max-w-5xl mx-auto" data-aos="fade-right">
-    <h3 class="text-3xl font-bold mb-6">About Us</h3>
-    <p class="mb-4">Founded in 2023 and based in Delhi, Corefact Research is a modern market research firm specializing in both qualitative and quantitative insights. We combine deep domain knowledge with tech-powered solutions to guide strategic decisions.</p>
-    <ul class="grid grid-cols-2 gap-4 mt-6 text-gray-600">
-      <li><strong>Industry:</strong> Market Research & Analytics</li>
-      <li><strong>Founded:</strong> 2023</li>
-      <li><strong>Team:</strong> 11–50 professionals</li>
-      <li><strong>Headquarters:</strong> Delhi, India</li>
-    </ul>
+  <!-- SERVICES -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-head">
+        <h2>Services designed for speed, quality, and reliability</h2>
+        <p class="muted">We support end-to-end fieldwork with strong validation and data integrity.</p>
+      </div>
+
+      <div class="cards">
+        <div class="card reveal">
+          <h3>CATI Data Collection</h3>
+          <p>Professional interviewers, monitored calls, quota control, and daily reporting.</p>
+          <ul>
+            <li>Monitoring & call validation</li>
+            <li>Fast turnaround</li>
+            <li>Complex quotas supported</li>
+          </ul>
+        </div>
+
+        <div class="card reveal">
+          <h3>Online Surveys & Panels</h3>
+          <p>Verified panel partners and fraud prevention measures to ensure real respondents.</p>
+          <ul>
+            <li>Bot & duplicate detection</li>
+            <li>Speed checks & QC flags</li>
+            <li>Multi-market coverage</li>
+          </ul>
+        </div>
+
+        <div class="card reveal">
+          <h3>B2B Sampling</h3>
+          <p>Reach niche professionals and decision makers across industries and functions.</p>
+          <ul>
+            <li>Job function targeting</li>
+            <li>Decision maker access</li>
+            <li>Hard-to-reach audiences</li>
+          </ul>
+        </div>
+
+        <div class="card reveal">
+          <h3>Healthcare (HCP)</h3>
+          <p>Physicians, specialists, nurses, and healthcare stakeholders — verified recruitment.</p>
+          <ul>
+            <li>Specialty-based targeting</li>
+            <li>License verification (where available)</li>
+            <li>High data accuracy</li>
+          </ul>
+        </div>
+
+        <div class="card reveal">
+          <h3>Qualitative Recruitment</h3>
+          <p>Recruit participants for IDIs, FGDs, online communities, and diary studies.</p>
+          <ul>
+            <li>Screening & validation</li>
+            <li>Attendance confirmation</li>
+            <li>Incentive coordination</li>
+          </ul>
+        </div>
+
+        <div class="card reveal">
+          <h3>Survey Programming</h3>
+          <p>Questionnaire programming, hosting, testing, and smooth respondent experience.</p>
+          <ul>
+            <li>Logic & quota setup</li>
+            <li>Device optimization</li>
+            <li>Pilot + launch support</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- SOLUTIONS -->
-  <section id="solutions" class="py-16 bg-gray-50 px-8" data-aos="fade-left">
-    <h3 class="text-3xl font-bold text-center mb-12">Solutions & Services</h3>
-    <div class="grid md:grid-cols-4 gap-6 text-center">
-      <div><img src="https://img.icons8.com/ios/50/graph.png" class="mx-auto"><p class="mt-2 font-semibold">Market Research</p></div>
-      <div><img src="https://img.icons8.com/ios/50/data-configuration.png" class="mx-auto"><p class="mt-2 font-semibold">Data Analysis</p></div>
-      <div><img src="https://img.icons8.com/ios/50/strategy-board.png" class="mx-auto"><p class="mt-2 font-semibold">Strategy Consulting</p></div>
-      <div><img src="https://img.icons8.com/ios/50/combo-chart.png" class="mx-auto"><p class="mt-2 font-semibold">Analytics Platforms</p></div>
+  <!-- PROCESS -->
+  <section class="section alt" id="process">
+    <div class="container">
+      <div class="section-head">
+        <h2>How we work</h2>
+        <p class="muted">A consistent process that protects timelines and data quality.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="step reveal">
+          <span class="step-no">01</span>
+          <div>
+            <h3>Requirement Intake</h3>
+            <p>We understand the audience, geography, LOI, and incidence rate requirements.</p>
+          </div>
+        </div>
+        <div class="step reveal">
+          <span class="step-no">02</span>
+          <div>
+            <h3>Feasibility + Quotas</h3>
+            <p>We confirm feasibility and finalize quota structure with clear delivery plan.</p>
+          </div>
+        </div>
+        <div class="step reveal">
+          <span class="step-no">03</span>
+          <div>
+            <h3>Soft Launch</h3>
+            <p>We test survey flow and validate early data before full-scale fieldwork.</p>
+          </div>
+        </div>
+        <div class="step reveal">
+          <span class="step-no">04</span>
+          <div>
+            <h3>Live Fieldwork + Reporting</h3>
+            <p>Daily updates, quota monitoring, and quality checks through the project.</p>
+          </div>
+        </div>
+        <div class="step reveal">
+          <span class="step-no">05</span>
+          <div>
+            <h3>QC + Delivery</h3>
+            <p>We deliver clean data with validations, open ends (if any), and audit trail.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASE STUDIES -->
+  <section class="section" id="cases">
+    <div class="container">
+      <div class="section-head">
+        <h2>Case studies</h2>
+        <p class="muted">A snapshot of execution strength across different audiences and timelines.</p>
+      </div>
+
+      <div class="case-grid">
+        <div class="case reveal">
+          <div class="case-top">
+            <span class="badge">CATI</span>
+            <span class="badge badge-outline">India</span>
+          </div>
+          <h3>FMCG Brand Tracking</h3>
+          <p class="muted">n=1200 • LOI 18 min • Multi-city quotas</p>
+          <ul>
+            <li>Daily reporting and quota control</li>
+            <li>Call monitoring + validations</li>
+            <li>On-time delivery</li>
+          </ul>
+        </div>
+
+        <div class="case reveal">
+          <div class="case-top">
+            <span class="badge">B2B</span>
+            <span class="badge badge-outline">US</span>
+          </div>
+          <h3>IT Decision Makers Study</h3>
+          <p class="muted">n=200 • Hard-to-reach roles</p>
+          <ul>
+            <li>Strict targeting by job role</li>
+            <li>High validation success rate</li>
+            <li>Complex quota execution</li>
+          </ul>
+        </div>
+
+        <div class="case reveal">
+          <div class="case-top">
+            <span class="badge">Healthcare</span>
+            <span class="badge badge-outline">UK</span>
+          </div>
+          <h3>Physician Specialty Survey</h3>
+          <p class="muted">n=150 • Specialist recruitment</p>
+          <ul>
+            <li>Specialty validation</li>
+            <li>Speeding + logic QC</li>
+            <li>Clean data output</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- TESTIMONIALS -->
-  <section id="testimonials" class="py-16 px-8 max-w-5xl mx-auto" data-aos="fade-up">
-    <h3 class="text-3xl font-bold text-center mb-12">What Our Clients Say</h3>
-    <div class="space-y-8">
-      <blockquote class="bg-white shadow p-6 rounded">
-        “Their BrandPulse dashboard gave us instant visibility into sentiment shifts. We secured first-mover advantage.”
-        <footer class="mt-2 text-sm font-semibold text-gray-600">— VP, Global Tech Startup</footer>
-      </blockquote>
-      <blockquote class="bg-white shadow p-6 rounded">
-        “Their strategic research saved us 4 months of secondary analysis. We recommend Corefact for mission-critical insights.”
-        <footer class="mt-2 text-sm font-semibold text-gray-600">— Director, Financial Services Group</footer>
-      </blockquote>
-    </div>
-  </section>
-
-  <!-- CLIENT LOGOS -->
-  <section class="bg-white py-10 px-6 text-center" data-aos="zoom-in">
-    <h3 class="text-xl font-semibold mb-4">Trusted By</h3>
-    <div class="flex justify-center items-center gap-8 client-slider">
-      <img src="https://via.placeholder.com/100x50?text=Client+1" />
-      <img src="https://via.placeholder.com/100x50?text=Client+2" />
-      <img src="https://via.placeholder.com/100x50?text=Client+3" />
-      <img src="https://via.placeholder.com/100x50?text=Client+4" />
-    </div>
-  </section>
-
-  <!-- BLOG/INSIGHTS -->
-  <section class="bg-gray-50 py-16 px-8 max-w-5xl mx-auto" data-aos="fade-up">
-    <h3 class="text-3xl font-bold mb-6">Insights & Thought Leadership</h3>
-    <div class="grid md:grid-cols-2 gap-6">
-      <div class="bg-white shadow p-4 rounded">
-        <h4 class="font-semibold text-lg">Top Trends in Healthcare Research 2025</h4>
-        <p class="text-gray-600 mt-2">Discover the emerging research techniques and technology innovations transforming the healthcare landscape.</p>
+  <section class="section alt" id="testimonials">
+    <div class="container">
+      <div class="section-head">
+        <h2>What our partners say</h2>
+        <p class="muted">Quality, timelines, and communication — consistently delivered.</p>
       </div>
-      <div class="bg-white shadow p-4 rounded">
-        <h4 class="font-semibold text-lg">AI in Market Research: Promise or Hype?</h4>
-        <p class="text-gray-600 mt-2">We explore the balance between automation and human intelligence in designing smarter research.</p>
+
+      <div class="test-grid">
+        <div class="test reveal">
+          <p>“Very reliable team. Great communication and strong quality checks on every project.”</p>
+          <div class="who">
+            <span class="avatar">A</span>
+            <div>
+              <b>Research Director</b>
+              <span class="muted">Global Insights Agency</span>
+            </div>
+          </div>
+        </div>
+        <div class="test reveal">
+          <p>“They handled complex quotas smoothly and delivered on time. Recommended for CATI.”</p>
+          <div class="who">
+            <span class="avatar">R</span>
+            <div>
+              <b>Project Manager</b>
+              <span class="muted">Market Research Firm</span>
+            </div>
+          </div>
+        </div>
+        <div class="test reveal">
+          <p>“Strong respondent validation for B2B. Great experience working together.”</p>
+          <div class="who">
+            <span class="avatar">S</span>
+            <div>
+              <b>Consultant</b>
+              <span class="muted">Strategy Consulting</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT FORM -->
-  <section id="contact" class="py-16 px-8 max-w-4xl mx-auto" data-aos="fade-up">
-    <h3 class="text-3xl font-bold mb-4">Get in Touch</h3>
-    <p class="mb-6 text-lg">Contact us at: <a href="mailto:ujjwalthakur@corefactresearch.co.in" class="text-blue-600 underline">ujjwalthakur@corefactresearch.co.in</a></p>
-    <form action="contact.php" method="POST" class="grid gap-4">
-      <input type="text" name="name" placeholder="Your Name" class="p-3 border border-gray-300 rounded" required>
-      <input type="email" name="email" placeholder="Your Email" class="p-3 border border-gray-300 rounded" required>
-      <textarea name="message" placeholder="Your Message" class="p-3 border border-gray-300 rounded" rows="4" required></textarea>
-      <button type="submit" class="bg-blue-500 text-white px-6 py-3 rounded hover:bg-blue-600 transition">Submit</button>
-    </form>
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="container contact-grid">
+      <div class="contact-left">
+        <h2>Let’s discuss your project</h2>
+        <p class="muted">
+          Share target audience, geography, sample size, and timeline.
+          We’ll respond quickly with feasibility and a quote.
+        </p>
+
+        <div class="contact-box">
+          <div class="info">
+            <span class="label">Website</span>
+            <span>www.corefactresearch.co.in</span>
+          </div>
+          <div class="info">
+            <span class="label">Email</span>
+            <span>ujjwalthakur@corefactresearch.co.in</span>
+          </div>
+          <div class="info">
+            <span class="label">Phone</span>
+            <span>+91 9871421915</span>
+          </div>
+        </div>
+
+        <a class="btn btn-outline" target="_blank"
+           href="https://wa.me/919871421915?text=Hello%20Corefact%20Research%2C%20I%20want%20a%20quote%20for%20my%20market%20research%20project.">
+          WhatsApp Now
+        </a>
+      </div>
+
+      <div class="contact-right">
+        <form class="form-card" id="contactForm">
+          <h3>Request a Quote</h3>
+
+          <div class="grid-2">
+            <div>
+              <label>Full Name</label>
+              <input type="text" placeholder="Your name" required/>
+            </div>
+            <div>
+              <label>Company</label>
+              <input type="text" placeholder="Company name" required/>
+            </div>
+          </div>
+
+          <div class="grid-2">
+            <div>
+              <label>Email</label>
+              <input type="email" placeholder="you@company.com" required/>
+            </div>
+            <div>
+              <label>Phone</label>
+              <input type="text" placeholder="+91 XXXXX XXXXX" />
+            </div>
+          </div>
+
+          <label>Project Details</label>
+          <textarea rows="5" placeholder="Audience, geography, sample size, LOI, and timeline..." required></textarea>
+
+          <button type="submit" class="btn btn-full">Send Request</button>
+          <small class="muted">We respond within 24–48 hours.</small>
+        </form>
+      </div>
+    </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-gray-900 text-white text-center py-6">
-    <p>Contact us: <a href="mailto:ujjwalthakur@corefactresearch.co.in" class="underline hover:text-blue-400">ujjwalthakur@corefactresearch.co.in</a></p>
-    <p class="mt-2">&copy; 2025 Corefact Research. All rights reserved.</p>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <b>Corefact Research</b>
+        <p class="muted">CATI • Online • B2B • Healthcare</p>
+      </div>
+      <div class="muted">© <span id="year"></span> Corefact Research. All rights reserved.</div>
+    </div>
   </footer>
 
-  <!-- AOS Script -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
