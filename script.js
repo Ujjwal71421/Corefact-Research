@@ -17,28 +17,26 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
-// Reveal animation on scroll
-const revealEls = document.querySelectorAll(".reveal");
-const runReveal = () => {
+// Reveal on scroll
+const els = document.querySelectorAll(".reveal");
+const reveal = () => {
   const trigger = window.innerHeight * 0.88;
-  revealEls.forEach(el => {
+  els.forEach(el => {
     if (el.getBoundingClientRect().top < trigger) el.classList.add("active");
   });
 };
-window.addEventListener("scroll", runReveal);
-runReveal();
+window.addEventListener("scroll", reveal);
+reveal();
 
 // Footer year
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// Form submits
-const hookForm = (id) => {
+// Form submit
+["quickQuote", "contactForm"].forEach(id => {
   const form = document.getElementById(id);
   form?.addEventListener("submit", (e) => {
     e.preventDefault();
     alert("✅ Thanks! Your request has been submitted. We will contact you within 24–48 hours.");
     form.reset();
   });
-};
-hookForm("quickQuote");
-hookForm("contactForm");
+});
