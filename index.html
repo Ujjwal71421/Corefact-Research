@@ -4,12 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Corefact Research | CATI & Online Data Collection</title>
-  <meta name="description" content="Corefact Research provides high-quality CATI, Online Surveys, B2B and Healthcare research data collection with strict QA and fast turnaround." />
+  <meta name="description" content="Corefact Research provides high-quality CATI, Online Surveys, B2B and Healthcare data collection with strict QA and fast turnaround." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css"/>
 </head>
 
@@ -24,9 +23,9 @@
 
       <nav class="navlinks" id="navlinks">
         <a href="#services">Services</a>
+        <a href="#industries">Industries</a>
         <a href="#process">Process</a>
         <a href="#cases">Case Studies</a>
-        <a href="#testimonials">Testimonials</a>
         <a href="#contact" class="btn btn-primary btn-sm">Request a Quote</a>
       </nav>
 
@@ -38,7 +37,7 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
 
     <div class="container hero-grid">
       <div class="hero-left reveal">
@@ -60,26 +59,19 @@
 
         <div class="cta">
           <a href="#contact" class="btn btn-primary">Request a Quote</a>
-          <a href="#services" class="btn btn-outline">Explore Services</a>
+          <a href="assets/Corefact-Capability-Deck.pdf" class="btn btn-outline" download>
+            Download Capability Deck
+          </a>
         </div>
 
         <div class="trust">
-          <div class="trust-card">
-            <b>95%+</b><span>Quality Score</span>
-          </div>
-          <div class="trust-card">
-            <b>24–48h</b><span>Feasibility</span>
-          </div>
-          <div class="trust-card">
-            <b>20+</b><span>Countries</span>
-          </div>
-          <div class="trust-card">
-            <b>10-step</b><span>QC Framework</span>
-          </div>
+          <div class="trust-card"><b>95%+</b><span>Quality Score</span></div>
+          <div class="trust-card"><b>24–48h</b><span>Feasibility</span></div>
+          <div class="trust-card"><b>20+</b><span>Countries</span></div>
+          <div class="trust-card"><b>10-step</b><span>QC Framework</span></div>
         </div>
       </div>
 
-      <!-- Quote Card -->
       <div class="hero-right reveal">
         <div class="glass">
           <div class="glass-top">
@@ -108,14 +100,38 @@
             <input type="number" placeholder="e.g., 300" required>
 
             <button class="btn btn-primary btn-full" type="submit">Submit</button>
-            <small>✅ No spam • Quick feasibility & quote</small>
+            <small>✅ Quick feasibility & quote</small>
           </form>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SERVICES -->
+  <!-- CLIENT LOGOS -->
+  <section class="clients">
+    <div class="container reveal">
+      <p class="clients-title">Trusted by research agencies, consultants & brands globally</p>
+      <div class="logo-slider">
+        <div class="logo-track">
+          <div class="logo-item">Global Agency</div>
+          <div class="logo-item">Insights Partner</div>
+          <div class="logo-item">Consulting Firm</div>
+          <div class="logo-item">Healthcare</div>
+          <div class="logo-item">B2B Research</div>
+          <div class="logo-item">Consumer Panel</div>
+
+          <div class="logo-item">Global Agency</div>
+          <div class="logo-item">Insights Partner</div>
+          <div class="logo-item">Consulting Firm</div>
+          <div class="logo-item">Healthcare</div>
+          <div class="logo-item">B2B Research</div>
+          <div class="logo-item">Consumer Panel</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES WITH IMAGES -->
   <section class="section" id="services">
     <div class="container">
       <div class="section-head reveal">
@@ -123,72 +139,55 @@
         <p>Designed for speed, quality and reliability — built for research agencies globally.</p>
       </div>
 
-      <div class="grid3">
-        <div class="card reveal color1">
-          <h3>CATI Data Collection</h3>
-          <p>Professional interviewers, monitored calls, quota control and reporting.</p>
-          <ul>
-            <li>Call validation & monitoring</li>
-            <li>Quota management</li>
-            <li>Daily project updates</li>
-          </ul>
+      <div class="service-grid">
+        <div class="service-card reveal">
+          <img src="assets/service1.jpg" alt="CATI service" />
+          <div class="service-content">
+            <h3>CATI Data Collection</h3>
+            <p>Professional interviewers, monitored calls, quota control and daily reporting.</p>
+          </div>
         </div>
 
-        <div class="card reveal color2">
-          <h3>Online Surveys & Panels</h3>
-          <p>Verified sampling sources with anti-fraud processes and strict QC.</p>
-          <ul>
-            <li>Bot/duplicate detection</li>
-            <li>Speed checks</li>
-            <li>Multi-country delivery</li>
-          </ul>
+        <div class="service-card reveal">
+          <img src="assets/service2.jpg" alt="Online survey service" />
+          <div class="service-content">
+            <h3>Online Surveys & Panels</h3>
+            <p>Verified sample sources with anti-fraud process, speed checks and QC filters.</p>
+          </div>
         </div>
 
-        <div class="card reveal color3">
-          <h3>B2B Sampling</h3>
-          <p>Decision-makers and niche professionals across industries and roles.</p>
-          <ul>
-            <li>Hard-to-reach audiences</li>
-            <li>Complex quotas</li>
-            <li>Role-based targeting</li>
-          </ul>
-        </div>
-
-        <div class="card reveal color4">
-          <h3>Healthcare (HCP)</h3>
-          <p>Physicians and specialists with validation and specialty targeting.</p>
-          <ul>
-            <li>Specialty recruitment</li>
-            <li>Verification (where possible)</li>
-            <li>High data accuracy</li>
-          </ul>
-        </div>
-
-        <div class="card reveal color5">
-          <h3>Qual Recruitment</h3>
-          <p>Recruit for IDIs, FGDs, online communities and diary studies.</p>
-          <ul>
-            <li>Screeners & validation</li>
-            <li>Attendance confirmation</li>
-            <li>Incentive management</li>
-          </ul>
-        </div>
-
-        <div class="card reveal color6">
-          <h3>Survey Programming</h3>
-          <p>Programming, hosting and testing with smooth respondent UX.</p>
-          <ul>
-            <li>Logic & quota setup</li>
-            <li>Mobile optimized</li>
-            <li>Pilot & launch support</li>
-          </ul>
+        <div class="service-card reveal">
+          <img src="assets/service3.jpg" alt="Healthcare service" />
+          <div class="service-content">
+            <h3>Healthcare (HCP) & B2B Sampling</h3>
+            <p>Physicians, specialists, decision makers, niche profiles with validation support.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- INDUSTRIES -->
+  <section class="section soft" id="industries">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>Industries We Serve</h2>
+        <p>From consumer insights to niche professional audiences — we deliver with quality.</p>
+      </div>
+
+      <div class="grid3">
+        <div class="industry reveal"><span>🛍️</span><h3>FMCG / Retail</h3><p>Tracking, U&A, concept testing, pricing studies.</p></div>
+        <div class="industry reveal"><span>💻</span><h3>Technology</h3><p>ITDMs, SaaS buyers, cloud/security, CX studies.</p></div>
+        <div class="industry reveal"><span>🏥</span><h3>Healthcare</h3><p>HCPs, hospitals, payers, patient pathway studies.</p></div>
+        <div class="industry reveal"><span>🏦</span><h3>BFSI</h3><p>Banking, insurance, fintech adoption research.</p></div>
+        <div class="industry reveal"><span>🚗</span><h3>Automotive</h3><p>EV insights, dealership experience, owner studies.</p></div>
+        <div class="industry reveal"><span>📦</span><h3>Logistics</h3><p>B2B supply chain insights & procurement research.</p></div>
+      </div>
+    </div>
+  </section>
+
   <!-- PROCESS -->
-  <section class="section soft" id="process">
+  <section class="section" id="process">
     <div class="container">
       <div class="section-head reveal">
         <h2>How We Work</h2>
@@ -205,67 +204,12 @@
     </div>
   </section>
 
-  <!-- CASES -->
-  <section class="section" id="cases">
-    <div class="container">
-      <div class="section-head reveal">
-        <h2>Case Studies</h2>
-        <p>Execution strength across audiences and timelines (sample examples).</p>
-      </div>
-
-      <div class="grid3">
-        <div class="case reveal">
-          <span class="tag">CATI • India</span>
-          <h3>FMCG Brand Tracking</h3>
-          <p>n=1200 • LOI 18 min • Multi-city quotas</p>
-        </div>
-
-        <div class="case reveal">
-          <span class="tag">B2B • US</span>
-          <h3>IT Decision Makers Study</h3>
-          <p>n=200 • Hard-to-reach roles</p>
-        </div>
-
-        <div class="case reveal">
-          <span class="tag">Healthcare • UK</span>
-          <h3>Physician Specialty Survey</h3>
-          <p>n=150 • Specialist recruitment</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section class="section soft" id="testimonials">
-    <div class="container">
-      <div class="section-head reveal">
-        <h2>Testimonials</h2>
-        <p>Quality, timelines and communication — consistently delivered.</p>
-      </div>
-
-      <div class="grid3">
-        <div class="testimonial reveal">
-          <p>“Great communication and strong QC. Reliable partner for ongoing work.”</p>
-          <b>Research Director</b><span>Global Insights Agency</span>
-        </div>
-        <div class="testimonial reveal">
-          <p>“Complex quotas were handled smoothly. Very strong CATI execution.”</p>
-          <b>Project Manager</b><span>Market Research Firm</span>
-        </div>
-        <div class="testimonial reveal">
-          <p>“B2B validation process is strong. Professional team and timely updates.”</p>
-          <b>Consultant</b><span>Strategy Consulting</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="section" id="contact">
+  <!-- CONTACT (Formspree Ready) -->
+  <section class="section soft" id="contact">
     <div class="container contact-grid">
       <div class="reveal">
         <h2>Let’s discuss your project</h2>
-        <p>Share your audience, geography and timeline. We’ll respond with feasibility quickly.</p>
+        <p>Share your audience, geography and timeline. We’ll respond quickly with feasibility.</p>
 
         <div class="contact-card">
           <div><b>Email:</b> ujjwalthakur@corefactresearch.co.in</div>
@@ -279,26 +223,29 @@
         </a>
       </div>
 
-      <form id="contactForm" class="contact-form reveal">
+      <!-- IMPORTANT: Replace FORM_ID -->
+      <form id="contactForm" class="contact-form reveal" action="https://formspree.io/f/FORM_ID" method="POST">
         <h3>Request a Quote</h3>
-        <input placeholder="Full Name" required>
-        <input placeholder="Company Name" required>
-        <input placeholder="Email" type="email" required>
-        <textarea placeholder="Audience, geography, sample size, LOI, timeline..." rows="5" required></textarea>
+        <input name="name" placeholder="Full Name" required>
+        <input name="company" placeholder="Company Name" required>
+        <input name="email" placeholder="Email" type="email" required>
+        <textarea name="message" placeholder="Audience, geography, sample size, LOI, timeline..." rows="5" required></textarea>
         <button class="btn btn-primary btn-full" type="submit">Send Request</button>
         <small>We respond within 24–48 hours.</small>
       </form>
     </div>
   </section>
 
+  <!-- WHATSAPP FLOAT -->
+  <a class="whatsapp-float"
+     href="https://wa.me/919911146165?text=Hello%20Corefact%20Research%2C%20I%20want%20a%20quote%20for%20my%20market%20research%20project."
+     target="_blank"
+     aria-label="WhatsApp">💬</a>
+
   <footer class="footer">
     <div class="container footer-inner">
-      <div class="footer-left">
-        <img src="assets/logo.png" class="footer-logo" alt="Corefact Research"/>
-      </div>
-      <div class="footer-right">
-        © <span id="year"></span> Corefact Research. All rights reserved.
-      </div>
+      <img src="assets/logo.png" class="footer-logo" alt="Corefact Research"/>
+      <div>© <span id="year"></span> Corefact Research. All rights reserved.</div>
     </div>
   </footer>
 
