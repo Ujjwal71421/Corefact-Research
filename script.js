@@ -1,46 +1,44 @@
 // Mobile menu
-const hamburger = document.getElementById("hamburger");
-const navLinks = document.getElementById("navLinks");
+const menuBtn = document.getElementById("menuBtn");
+const navlinks = document.getElementById("navlinks");
 
-hamburger?.addEventListener("click", () => {
-  navLinks.classList.toggle("open");
+menuBtn?.addEventListener("click", () => {
+  navlinks.classList.toggle("open");
 });
 
-// Smooth scroll for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener("click", function (e) {
-    const href = this.getAttribute("href");
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener("click", (e) => {
+    const href = a.getAttribute("href");
     if (!href || href === "#") return;
     e.preventDefault();
     document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
-    navLinks.classList.remove("open");
+    navlinks.classList.remove("open");
   });
 });
 
-// Reveal on scroll
+// Reveal animation on scroll
 const revealEls = document.querySelectorAll(".reveal");
-const onScrollReveal = () => {
+const runReveal = () => {
   const trigger = window.innerHeight * 0.88;
   revealEls.forEach(el => {
-    const top = el.getBoundingClientRect().top;
-    if (top < trigger) el.classList.add("active");
+    if (el.getBoundingClientRect().top < trigger) el.classList.add("active");
   });
 };
-window.addEventListener("scroll", onScrollReveal);
-onScrollReveal();
+window.addEventListener("scroll", runReveal);
+runReveal();
 
 // Footer year
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// Fake form submit (replace with real backend later)
-const handleForm = (formId) => {
-  const form = document.getElementById(formId);
+// Form submits
+const hookForm = (id) => {
+  const form = document.getElementById(id);
   form?.addEventListener("submit", (e) => {
     e.preventDefault();
-    alert("Thanks! Your request has been submitted. We will contact you within 24–48 hours.");
+    alert("✅ Thanks! Your request has been submitted. We will contact you within 24–48 hours.");
     form.reset();
   });
 };
-
-handleForm("quickQuote");
-handleForm("contactForm");
+hookForm("quickQuote");
+hookForm("contactForm");
