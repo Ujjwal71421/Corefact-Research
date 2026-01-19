@@ -1,34 +1,46 @@
-// Smooth scrolling for anchor links
+// Mobile menu
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("navLinks");
+
+hamburger?.addEventListener("click", () => {
+  navLinks.classList.toggle("open");
+});
+
+// Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-      }
-    });
+  anchor.addEventListener("click", function (e) {
+    const href = this.getAttribute("href");
+    if (!href || href === "#") return;
+    e.preventDefault();
+    document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+    navLinks.classList.remove("open");
   });
-  
-  // Back to top button creation
-  const backToTop = document.createElement('button');
-  backToTop.textContent = '↑';
-  backToTop.id = 'backToTop';
-  document.body.appendChild(backToTop);
-  
-  // Show/hide button on scroll
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-      backToTop.style.display = 'block';
-    } else {
-      backToTop.style.display = 'none';
-    }
+});
+
+// Reveal on scroll
+const revealEls = document.querySelectorAll(".reveal");
+const onScrollReveal = () => {
+  const trigger = window.innerHeight * 0.88;
+  revealEls.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if (top < trigger) el.classList.add("active");
   });
-  
-  // Scroll to top on click
-  backToTop.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+window.addEventListener("scroll", onScrollReveal);
+onScrollReveal();
+
+// Footer year
+document.getElementById("year").textContent = new Date().getFullYear();
+
+// Fake form submit (replace with real backend later)
+const handleForm = (formId) => {
+  const form = document.getElementById(formId);
+  form?.addEventListener("submit", (e) => {
+    e.preventDefault();
+    alert("Thanks! Your request has been submitted. We will contact you within 24–48 hours.");
+    form.reset();
   });
-  
+};
+
+handleForm("quickQuote");
+handleForm("contactForm");
