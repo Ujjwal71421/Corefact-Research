@@ -1,254 +1,1426 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Corefact Research | CATI & Online Data Collection</title>
-  <meta name="description" content="Corefact Research provides high-quality CATI, Online Surveys, B2B and Healthcare data collection with strict QA and fast turnaround." />
+    <meta charset="UTF-8">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css"/>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="COREFACT GT — Market intelligence, research and strategic insights that turn complex information into confident business decisions."
+    >
+
+    <title>COREFACT GT | Research. Intelligence. Direction.</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
 
-  <!-- NAV -->
-  <header class="nav">
-    <div class="container nav-inner">
-      <a class="brand" href="#">
-        <img src="assets/logo.png" class="logo" alt="Corefact Research Logo"/>
-      </a>
+    <!-- =====================================================
+         PAGE LOADER
+    ====================================================== -->
 
-      <nav class="navlinks" id="navlinks">
-        <a href="#services">Services</a>
-        <a href="#industries">Industries</a>
-        <a href="#process">Process</a>
-        <a href="#cases">Case Studies</a>
-        <a href="#contact" class="btn btn-primary btn-sm">Request a Quote</a>
-      </nav>
-
-      <button class="hamburger" id="menuBtn" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-inner">
+            <span>COREFACT</span>
+        </div>
     </div>
-  </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-overlay"></div>
 
-    <div class="container hero-grid">
-      <div class="hero-left reveal">
-        <div class="badge">
-          <span class="dot"></span>
-          Global Data Collection • CATI • Online • B2B • Healthcare
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="site-header" id="siteHeader">
+
+        <div class="container header-container">
+
+            <!-- Logo -->
+
+            <a href="index.html" class="logo" aria-label="COREFACT GT Home">
+
+                <span class="logo-main">
+                    COREFACT
+                </span>
+
+                <span class="logo-sub">
+                    GT
+                </span>
+
+            </a>
+
+
+            <!-- Desktop Navigation -->
+
+            <nav class="desktop-navigation" aria-label="Main Navigation">
+
+                <a href="#solutions">
+                    Solutions
+                </a>
+
+                <a href="#framework">
+                    Framework
+                </a>
+
+                <a href="#industries">
+                    Industries
+                </a>
+
+                <a href="#insights">
+                    Insights
+                </a>
+
+                <a href="#about">
+                    About
+                </a>
+
+                <a href="#contact">
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <!-- Header CTA -->
+
+            <a href="#contact" class="header-cta">
+                Let's Talk
+                <span>↗</span>
+            </a>
+
+
+            <!-- Mobile Menu Button -->
+
+            <button
+                class="mobile-menu-button"
+                id="mobileMenuButton"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
         </div>
 
-        <h1 class="title">
-          Trusted Data Collection Partner for
-          <span class="grad">Market Research Agencies</span>
-          Worldwide.
-        </h1>
+    </header>
 
-        <p class="subtitle">
-          High-quality CATI and Online fieldwork with strict QA, reliable sampling,
-          and fast turnaround. We deliver the right respondents at the right time.
-        </p>
 
-        <div class="cta">
-          <a href="#contact" class="btn btn-primary">Request a Quote</a>
-          <a href="assets/Corefact-Capability-Deck.pdf" class="btn btn-outline" download>
-            Download Capability Deck
-          </a>
+    <!-- =====================================================
+         MOBILE NAVIGATION
+    ====================================================== -->
+
+    <div class="mobile-navigation" id="mobileNavigation">
+
+        <div class="mobile-navigation-inner">
+
+            <a href="#solutions">
+                Solutions
+            </a>
+
+            <a href="#framework">
+                Framework
+            </a>
+
+            <a href="#industries">
+                Industries
+            </a>
+
+            <a href="#insights">
+                Insights
+            </a>
+
+            <a href="#about">
+                About
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+            <a
+                href="#contact"
+                class="mobile-navigation-cta"
+            >
+                Start a Conversation ↗
+            </a>
+
         </div>
 
-        <div class="trust">
-          <div class="trust-card"><b>95%+</b><span>Quality Score</span></div>
-          <div class="trust-card"><b>24–48h</b><span>Feasibility</span></div>
-          <div class="trust-card"><b>20+</b><span>Countries</span></div>
-          <div class="trust-card"><b>10-step</b><span>QC Framework</span></div>
-        </div>
-      </div>
+    </div>
 
-      <div class="hero-right reveal">
-        <div class="glass">
-          <div class="glass-top">
-            <div class="spark">⚡</div>
-            <div>
-              <h3>Get a Quote in 2 Minutes</h3>
-              <p>Share your requirements — we respond within 24–48 hours.</p>
+
+    <main>
+
+
+        <!-- =====================================================
+             HERO
+        ====================================================== -->
+
+        <section class="hero-section">
+
+            <div class="hero-background-grid"></div>
+
+            <div class="hero-glow hero-glow-one"></div>
+            <div class="hero-glow hero-glow-two"></div>
+
+
+            <div class="container hero-container">
+
+                <div class="hero-content">
+
+                    <div class="eyebrow reveal">
+                        MARKET INTELLIGENCE · RESEARCH · STRATEGY
+                    </div>
+
+
+                    <h1 class="hero-title reveal reveal-delay-1">
+
+                        Turning
+                        <span class="hero-accent">
+                            complexity
+                        </span>
+
+                        into
+
+                        <span class="hero-outline">
+                            clarity.
+                        </span>
+
+                    </h1>
+
+
+                    <p class="hero-description reveal reveal-delay-2">
+
+                        COREFACT GT helps organizations understand
+                        markets, customers and opportunities through
+                        research-driven intelligence and strategic insight.
+
+                    </p>
+
+
+                    <div class="hero-actions reveal reveal-delay-3">
+
+                        <a
+                            href="#contact"
+                            class="button button-primary"
+                        >
+                            Start a Conversation
+                            <span>↗</span>
+                        </a>
+
+                        <a
+                            href="#solutions"
+                            class="button button-secondary"
+                        >
+                            Explore Our Solutions
+                            <span>↓</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Hero visual -->
+
+                <div class="hero-visual reveal reveal-delay-2">
+
+                    <div class="hero-orbit orbit-one"></div>
+                    <div class="hero-orbit orbit-two"></div>
+                    <div class="hero-orbit orbit-three"></div>
+
+                    <div class="hero-center">
+
+                        <div class="hero-center-label">
+                            COREFACT
+                        </div>
+
+                        <div class="hero-center-line"></div>
+
+                        <div class="hero-center-text">
+                            INSIGHT
+                        </div>
+
+                    </div>
+
+
+                    <div class="floating-data-card card-one">
+
+                        <span class="data-label">
+                            MARKET
+                        </span>
+
+                        <strong>
+                            +42%
+                        </strong>
+
+                        <small>
+                            Opportunity signal
+                        </small>
+
+                    </div>
+
+
+                    <div class="floating-data-card card-two">
+
+                        <span class="data-label">
+                            INSIGHT
+                        </span>
+
+                        <strong>
+                            08
+                        </strong>
+
+                        <small>
+                            Strategic themes
+                        </small>
+
+                    </div>
+
+
+                    <div class="floating-data-card card-three">
+
+                        <span class="data-label">
+                            DECISION
+                        </span>
+
+                        <strong>
+                            360°
+                        </strong>
+
+                        <small>
+                            Intelligence view
+                        </small>
+
+                    </div>
+
+                </div>
+
             </div>
-          </div>
 
-          <form id="quickQuote" class="form">
-            <label>Study Type</label>
-            <select required>
-              <option value="">Select</option>
-              <option>CATI</option>
-              <option>Online Surveys</option>
-              <option>B2B Sampling</option>
-              <option>Healthcare / HCP</option>
-              <option>Qual Recruitment</option>
-            </select>
 
-            <label>Geography</label>
-            <input type="text" placeholder="India / US / UK / Multi-country" required>
+            <!-- Hero bottom strip -->
 
-            <label>Sample Size</label>
-            <input type="number" placeholder="e.g., 300" required>
+            <div class="hero-bottom">
 
-            <button class="btn btn-primary btn-full" type="submit">Submit</button>
-            <small>✅ Quick feasibility & quote</small>
-          </form>
+                <div class="container hero-bottom-inner">
+
+                    <span>
+                        RESEARCH
+                    </span>
+
+                    <i></i>
+
+                    <span>
+                        DATA
+                    </span>
+
+                    <i></i>
+
+                    <span>
+                        INTELLIGENCE
+                    </span>
+
+                    <i></i>
+
+                    <span>
+                        STRATEGY
+                    </span>
+
+                    <i></i>
+
+                    <span>
+                        ACTION
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             INTRODUCTION
+        ====================================================== -->
+
+        <section class="intro-section">
+
+            <div class="container">
+
+                <div class="section-label">
+                    01 — THE COREFACT APPROACH
+                </div>
+
+
+                <div class="intro-grid">
+
+                    <div>
+
+                        <h2 class="section-title">
+
+                            Better decisions
+                            begin with better
+                            <span>questions.</span>
+
+                        </h2>
+
+                    </div>
+
+
+                    <div class="intro-copy">
+
+                        <p>
+                            Businesses operate in environments that change
+                            faster than traditional research cycles can keep up.
+                            Markets shift, customers evolve and new opportunities
+                            emerge before the data is fully understood.
+                        </p>
+
+                        <p>
+                            COREFACT GT combines structured research,
+                            intelligent analysis and strategic thinking to
+                            uncover what matters — and what comes next.
+                        </p>
+
+
+                        <a
+                            href="#framework"
+                            class="text-link"
+                        >
+                            Discover our approach
+                            <span>↗</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             SOLUTIONS
+        ====================================================== -->
+
+        <section
+            class="solutions-section"
+            id="solutions"
+        >
+
+            <div class="container">
+
+                <div class="section-heading-row">
+
+                    <div>
+
+                        <div class="section-label">
+                            02 — SOLUTIONS
+                        </div>
+
+                        <h2 class="section-title">
+                            Intelligence built
+                            around your
+                            <span>decisions.</span>
+                        </h2>
+
+                    </div>
+
+
+                    <p class="section-heading-description">
+
+                        From market understanding to customer intelligence,
+                        our solutions connect evidence with the decisions
+                        your organization needs to make.
+
+                    </p>
+
+                </div>
+
+
+                <div class="solutions-grid">
+
+
+                    <!-- Solution 01 -->
+
+                    <article class="solution-card">
+
+                        <div class="solution-number">
+                            01
+                        </div>
+
+                        <div class="solution-icon">
+                            ↗
+                        </div>
+
+                        <h3>
+                            Market Research
+                        </h3>
+
+                        <p>
+                            Understand market dynamics, category movements,
+                            competitive landscapes and emerging opportunities
+                            with structured primary and secondary research.
+                        </p>
+
+                        <a href="#contact">
+                            Explore solution
+                            <span>↗</span>
+                        </a>
+
+                    </article>
+
+
+                    <!-- Solution 02 -->
+
+                    <article class="solution-card">
+
+                        <div class="solution-number">
+                            02
+                        </div>
+
+                        <div class="solution-icon">
+                            ◌
+                        </div>
+
+                        <h3>
+                            Customer Intelligence
+                        </h3>
+
+                        <p>
+                            Discover what customers value, why they choose,
+                            what frustrates them and where their expectations
+                            are heading.
+                        </p>
+
+                        <a href="#contact">
+                            Explore solution
+                            <span>↗</span>
+                        </a>
+
+                    </article>
+
+
+                    <!-- Solution 03 -->
+
+                    <article class="solution-card">
+
+                        <div class="solution-number">
+                            03
+                        </div>
+
+                        <div class="solution-icon">
+                            +
+                        </div>
+
+                        <h3>
+                            Competitive Intelligence
+                        </h3>
+
+                        <p>
+                            Build a sharper understanding of competitors,
+                            positioning, market movements and strategic
+                            whitespace.
+                        </p>
+
+                        <a href="#contact">
+                            Explore solution
+                            <span>↗</span>
+                        </a>
+
+                    </article>
+
+
+                    <!-- Solution 04 -->
+
+                    <article class="solution-card">
+
+                        <div class="solution-number">
+                            04
+                        </div>
+
+                        <div class="solution-icon">
+                            ◇
+                        </div>
+
+                        <h3>
+                            Data & Analytics
+                        </h3>
+
+                        <p>
+                            Transform fragmented information into structured
+                            evidence through analysis, segmentation,
+                            visualization and decision modeling.
+                        </p>
+
+                        <a href="#contact">
+                            Explore solution
+                            <span>↗</span>
+                        </a>
+
+                    </article>
+
+
+                    <!-- Solution 05 -->
+
+                    <article class="solution-card">
+
+                        <div class="solution-number">
+                            05
+                        </div>
+
+                        <div class="solution-icon">
+                            /
+                        </div>
+
+                        <h3>
+                            Strategic Insights
+                        </h3>
+
+                        <p>
+                            Translate research findings into practical
+                            strategic implications that teams can act on
+                            with confidence.
+                        </p>
+
+                        <a href="#contact">
+                            Explore solution
+                            <span>↗</span>
+                        </a>
+
+                    </article>
+
+
+                    <!-- Solution 06 -->
+
+                    <article class="solution-card solution-card-dark">
+
+                        <div class="solution-number">
+                            06
+                        </div>
+
+                        <div class="solution-icon">
+                            →
+                        </div>
+
+                        <h3>
+                            Custom Intelligence
+                        </h3>
+
+                        <p>
+                            Have a complex question? We create tailored
+                            research programs around the exact business
+                            challenge you need to solve.
+                        </p>
+
+                        <a href="#contact">
+                            Start a project
+                            <span>↗</span>
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             FRAMEWORK
+        ====================================================== -->
+
+        <section
+            class="framework-section"
+            id="framework"
+        >
+
+            <div class="container">
+
+                <div class="framework-header">
+
+                    <div class="section-label">
+                        03 — OUR FRAMEWORK
+                    </div>
+
+                    <h2 class="section-title">
+                        From information
+                        to <span>direction.</span>
+                    </h2>
+
+                    <p>
+                        Our approach is designed to move beyond data collection.
+                        We connect research, interpretation and action into one
+                        continuous intelligence process.
+                    </p>
+
+                </div>
+
+
+                <div class="framework-process">
+
+
+                    <div class="framework-step active">
+
+                        <div class="framework-step-number">
+                            01
+                        </div>
+
+                        <div class="framework-step-content">
+
+                            <h3>
+                                Discover
+                            </h3>
+
+                            <p>
+                                Define the question, understand the context
+                                and identify the information required to
+                                create a meaningful answer.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="framework-connector"></div>
+
+
+                    <div class="framework-step">
+
+                        <div class="framework-step-number">
+                            02
+                        </div>
+
+                        <div class="framework-step-content">
+
+                            <h3>
+                                Decode
+                            </h3>
+
+                            <p>
+                                Analyze research, behavioral signals and
+                                market evidence to uncover patterns,
+                                relationships and opportunities.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="framework-connector"></div>
+
+
+                    <div class="framework-step">
+
+                        <div class="framework-step-number">
+                            03
+                        </div>
+
+                        <div class="framework-step-content">
+
+                            <h3>
+                                Direct
+                            </h3>
+
+                            <p>
+                                Translate insight into strategic direction,
+                                priorities and actions that move the
+                                organization forward.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="framework-statement">
+
+                    <span>
+                        THE RESULT
+                    </span>
+
+                    <strong>
+                        Clarity you can act on.
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             INDUSTRIES
+        ====================================================== -->
+
+        <section
+            class="industries-section"
+            id="industries"
+        >
+
+            <div class="container">
+
+                <div class="section-heading-row">
+
+                    <div>
+
+                        <div class="section-label">
+                            04 — INDUSTRIES
+                        </div>
+
+                        <h2 class="section-title">
+                            Expertise across
+                            <span>markets.</span>
+                        </h2>
+
+                    </div>
+
+                    <p class="section-heading-description">
+
+                        Our research programs adapt to the language,
+                        economics and decision-making dynamics of each
+                        industry we work with.
+
+                    </p>
+
+                </div>
+
+
+                <div class="industries-list">
+
+
+                    <a href="#" class="industry-item">
+
+                        <span class="industry-number">
+                            01
+                        </span>
+
+                        <span class="industry-name">
+                            Technology & Telecom
+                        </span>
+
+                        <span class="industry-arrow">
+                            ↗
+                        </span>
+
+                    </a>
+
+
+                    <a href="#" class="industry-item">
+
+                        <span class="industry-number">
+                            02
+                        </span>
+
+                        <span class="industry-name">
+                            Healthcare & Life Sciences
+                        </span>
+
+                        <span class="industry-arrow">
+                            ↗
+                        </span>
+
+                    </a>
+
+
+                    <a href="#" class="industry-item">
+
+                        <span class="industry-number">
+                            03
+                        </span>
+
+                        <span class="industry-name">
+                            Financial Services
+                        </span>
+
+                        <span class="industry-arrow">
+                            ↗
+                        </span>
+
+                    </a>
+
+
+                    <a href="#" class="industry-item">
+
+                        <span class="industry-number">
+                            04
+                        </span>
+
+                        <span class="industry-name">
+                            Automotive & Mobility
+                        </span>
+
+                        <span class="industry-arrow">
+                            ↗
+                        </span>
+
+                    </a>
+
+
+                    <a href="#" class="industry-item">
+
+                        <span class="industry-number">
+                            05
+                        </span>
+
+                        <span class="industry-name">
+                            Consumer & Retail
+                        </span>
+
+                        <span class="industry-arrow">
+                            ↗
+                        </span>
+
+                    </a>
+
+
+                    <a href="#" class="industry-item">
+
+                        <span class="industry-number">
+                            06
+                        </span>
+
+                        <span class="industry-name">
+                            Manufacturing & Industrial
+                        </span>
+
+                        <span class="industry-arrow">
+                            ↗
+                        </span>
+
+                    </a>
+
+
+                    <a href="#" class="industry-item">
+
+                        <span class="industry-number">
+                            07
+                        </span>
+
+                        <span class="industry-name">
+                            Energy & Infrastructure
+                        </span>
+
+                        <span class="industry-arrow">
+                            ↗
+                        </span>
+
+                    </a>
+
+
+                    <a href="#" class="industry-item">
+
+                        <span class="industry-number">
+                            08
+                        </span>
+
+                        <span class="industry-name">
+                            Professional Services
+                        </span>
+
+                        <span class="industry-arrow">
+                            ↗
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             INSIGHTS
+        ====================================================== -->
+
+        <section
+            class="insights-section"
+            id="insights"
+        >
+
+            <div class="container">
+
+                <div class="section-heading-row">
+
+                    <div>
+
+                        <div class="section-label">
+                            05 — INSIGHTS
+                        </div>
+
+                        <h2 class="section-title">
+                            What the market
+                            is telling us.
+                        </h2>
+
+                    </div>
+
+                    <a
+                        href="#"
+                        class="button button-secondary"
+                    >
+                        View all insights
+                        <span>↗</span>
+                    </a>
+
+                </div>
+
+
+                <div class="insights-grid">
+
+
+                    <article class="insight-card insight-featured">
+
+                        <div class="insight-image">
+
+                            <div class="insight-image-pattern"></div>
+
+                            <span>
+                                FEATURED INSIGHT
+                            </span>
+
+                        </div>
+
+                        <div class="insight-content">
+
+                            <div class="insight-meta">
+                                MARKET INTELLIGENCE · 08 MIN READ
+                            </div>
+
+                            <h3>
+                                The signals shaping tomorrow's
+                                business decisions.
+                            </h3>
+
+                            <a href="#">
+                                Read insight
+                                <span>↗</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <div class="insight-side">
+
+
+                        <article class="insight-small">
+
+                            <div class="insight-small-number">
+                                01
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    CUSTOMER
+                                </span>
+
+                                <h3>
+                                    Understanding changing
+                                    buyer expectations.
+                                </h3>
+
+                                <a href="#">
+                                    Read ↗
+                                </a>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="insight-small">
+
+                            <div class="insight-small-number">
+                                02
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    STRATEGY
+                                </span>
+
+                                <h3>
+                                    Finding whitespace
+                                    before competitors do.
+                                </h3>
+
+                                <a href="#">
+                                    Read ↗
+                                </a>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="insight-small">
+
+                            <div class="insight-small-number">
+                                03
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    DATA
+                                </span>
+
+                                <h3>
+                                    Turning fragmented data
+                                    into useful intelligence.
+                                </h3>
+
+                                <a href="#">
+                                    Read ↗
+                                </a>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             ABOUT
+        ====================================================== -->
+
+        <section
+            class="about-section"
+            id="about"
+        >
+
+            <div class="container">
+
+                <div class="about-grid">
+
+                    <div class="about-visual">
+
+                        <div class="about-circle circle-one"></div>
+                        <div class="about-circle circle-two"></div>
+                        <div class="about-circle circle-three"></div>
+
+                        <div class="about-mark">
+                            CF
+                        </div>
+
+                    </div>
+
+
+                    <div class="about-content">
+
+                        <div class="section-label">
+                            06 — ABOUT COREFACT
+                        </div>
+
+                        <h2 class="section-title">
+                            We don't just
+                            collect answers.
+                            We find the
+                            <span>meaning.</span>
+                        </h2>
+
+                        <p>
+                            COREFACT GT is built around a simple belief:
+                            research should make decision-making easier,
+                            not more complicated.
+                        </p>
+
+                        <p>
+                            We bring together researchers, analysts and
+                            strategic thinkers to help organizations
+                            understand the forces shaping their markets
+                            and customers.
+                        </p>
+
+
+                        <div class="about-stats">
+
+                            <div>
+                                <strong>
+                                    01
+                                </strong>
+
+                                <span>
+                                    Research-led
+                                </span>
+                            </div>
+
+                            <div>
+                                <strong>
+                                    02
+                                </strong>
+
+                                <span>
+                                    Insight-driven
+                                </span>
+                            </div>
+
+                            <div>
+                                <strong>
+                                    03
+                                </strong>
+
+                                <span>
+                                    Action-focused
+                                </span>
+                            </div>
+
+                        </div>
+
+
+                        <a
+                            href="#contact"
+                            class="text-link"
+                        >
+                            Learn more about COREFACT
+                            <span>↗</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             CTA
+        ====================================================== -->
+
+        <section
+            class="cta-section"
+            id="contact"
+        >
+
+            <div class="cta-background"></div>
+
+            <div class="container">
+
+                <div class="cta-inner">
+
+                    <div class="section-label">
+                        07 — START A CONVERSATION
+                    </div>
+
+                    <h2>
+                        Have a question
+                        worth <span>exploring?</span>
+                    </h2>
+
+                    <p>
+                        Tell us what you're trying to understand.
+                        We'll help you find the right way forward.
+                    </p>
+
+
+                    <a
+                        href="mailto:hello@corefactgt.com"
+                        class="button button-light"
+                    >
+                        hello@corefactgt.com
+                        <span>↗</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="footer-top">
+
+
+                <div class="footer-brand">
+
+                    <a
+                        href="index.html"
+                        class="logo footer-logo"
+                    >
+
+                        <span class="logo-main">
+                            COREFACT
+                        </span>
+
+                        <span class="logo-sub">
+                            GT
+                        </span>
+
+                    </a>
+
+
+                    <p>
+                        Research.
+                        Intelligence.
+                        Direction.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4>
+                        Explore
+                    </h4>
+
+                    <a href="#solutions">
+                        Solutions
+                    </a>
+
+                    <a href="#framework">
+                        Framework
+                    </a>
+
+                    <a href="#industries">
+                        Industries
+                    </a>
+
+                    <a href="#insights">
+                        Insights
+                    </a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4>
+                        Company
+                    </h4>
+
+                    <a href="#about">
+                        About
+                    </a>
+
+                    <a href="#">
+                        Careers
+                    </a>
+
+                    <a href="#contact">
+                        Contact
+                    </a>
+
+                    <a href="#">
+                        FAQs
+                    </a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4>
+                        Connect
+                    </h4>
+
+                    <a href="#">
+                        LinkedIn ↗
+                    </a>
+
+                    <a href="#">
+                        Instagram ↗
+                    </a>
+
+                    <a href="mailto:hello@corefactgt.com">
+                        Email ↗
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <span>
+                    © 2026 COREFACT GT. All rights reserved.
+                </span>
+
+                <div>
+
+                    <a href="#">
+                        Privacy Policy
+                    </a>
+
+                    <a href="#">
+                        Terms
+                    </a>
+
+                </div>
+
+            </div>
+
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- CLIENT LOGOS -->
-  <section class="clients">
-    <div class="container reveal">
-      <p class="clients-title">Trusted by research agencies, consultants & brands globally</p>
-      <div class="logo-slider">
-        <div class="logo-track">
-          <div class="logo-item">Global Agency</div>
-          <div class="logo-item">Insights Partner</div>
-          <div class="logo-item">Consulting Firm</div>
-          <div class="logo-item">Healthcare</div>
-          <div class="logo-item">B2B Research</div>
-          <div class="logo-item">Consumer Panel</div>
+    </footer>
 
-          <div class="logo-item">Global Agency</div>
-          <div class="logo-item">Insights Partner</div>
-          <div class="logo-item">Consulting Firm</div>
-          <div class="logo-item">Healthcare</div>
-          <div class="logo-item">B2B Research</div>
-          <div class="logo-item">Consumer Panel</div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- SERVICES WITH IMAGES -->
-  <section class="section" id="services">
-    <div class="container">
-      <div class="section-head reveal">
-        <h2>Our Services</h2>
-        <p>Designed for speed, quality and reliability — built for research agencies globally.</p>
-      </div>
 
-      <div class="service-grid">
-        <div class="service-card reveal">
-          <img src="assets/service1.jpg" alt="CATI service" />
-          <div class="service-content">
-            <h3>CATI Data Collection</h3>
-            <p>Professional interviewers, monitored calls, quota control and daily reporting.</p>
-          </div>
-        </div>
+    <!-- Main JavaScript -->
 
-        <div class="service-card reveal">
-          <img src="assets/service2.jpg" alt="Online survey service" />
-          <div class="service-content">
-            <h3>Online Surveys & Panels</h3>
-            <p>Verified sample sources with anti-fraud process, speed checks and QC filters.</p>
-          </div>
-        </div>
+    <script src="js/main.js"></script>
 
-        <div class="service-card reveal">
-          <img src="assets/service3.jpg" alt="Healthcare service" />
-          <div class="service-content">
-            <h3>Healthcare (HCP) & B2B Sampling</h3>
-            <p>Physicians, specialists, decision makers, niche profiles with validation support.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- INDUSTRIES -->
-  <section class="section soft" id="industries">
-    <div class="container">
-      <div class="section-head reveal">
-        <h2>Industries We Serve</h2>
-        <p>From consumer insights to niche professional audiences — we deliver with quality.</p>
-      </div>
-
-      <div class="grid3">
-        <div class="industry reveal"><span>🛍️</span><h3>FMCG / Retail</h3><p>Tracking, U&A, concept testing, pricing studies.</p></div>
-        <div class="industry reveal"><span>💻</span><h3>Technology</h3><p>ITDMs, SaaS buyers, cloud/security, CX studies.</p></div>
-        <div class="industry reveal"><span>🏥</span><h3>Healthcare</h3><p>HCPs, hospitals, payers, patient pathway studies.</p></div>
-        <div class="industry reveal"><span>🏦</span><h3>BFSI</h3><p>Banking, insurance, fintech adoption research.</p></div>
-        <div class="industry reveal"><span>🚗</span><h3>Automotive</h3><p>EV insights, dealership experience, owner studies.</p></div>
-        <div class="industry reveal"><span>📦</span><h3>Logistics</h3><p>B2B supply chain insights & procurement research.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROCESS -->
-  <section class="section" id="process">
-    <div class="container">
-      <div class="section-head reveal">
-        <h2>How We Work</h2>
-        <p>A consistent process that protects timelines and ensures clean data delivery.</p>
-      </div>
-
-      <div class="timeline">
-        <div class="step reveal"><b>01</b> Requirement Intake</div>
-        <div class="step reveal"><b>02</b> Feasibility + Quotas</div>
-        <div class="step reveal"><b>03</b> Soft Launch Validation</div>
-        <div class="step reveal"><b>04</b> Live Fieldwork + Reporting</div>
-        <div class="step reveal"><b>05</b> QC + Final Delivery</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT (Formspree Ready) -->
-  <section class="section soft" id="contact">
-    <div class="container contact-grid">
-      <div class="reveal">
-        <h2>Let’s discuss your project</h2>
-        <p>Share your audience, geography and timeline. We’ll respond quickly with feasibility.</p>
-
-        <div class="contact-card">
-          <div><b>Email:</b> ujjwalthakur@corefactresearch.co.in</div>
-          <div><b>Phone:</b> +91 9911146165</div>
-          <div><b>Website:</b> www.corefactresearch.co.in</div>
-        </div>
-
-        <a class="btn btn-outline" target="_blank"
-           href="https://wa.me/919911146165?text=Hello%20Corefact%20Research%2C%20I%20want%20a%20quote%20for%20my%20market%20research%20project.">
-          WhatsApp Now
-        </a>
-      </div>
-
-      <!-- IMPORTANT: Replace FORM_ID -->
-      <form id="contactForm" class="contact-form reveal" action="https://formspree.io/f/FORM_ID" method="POST">
-        <h3>Request a Quote</h3>
-        <input name="name" placeholder="Full Name" required>
-        <input name="company" placeholder="Company Name" required>
-        <input name="email" placeholder="Email" type="email" required>
-        <textarea name="message" placeholder="Audience, geography, sample size, LOI, timeline..." rows="5" required></textarea>
-        <button class="btn btn-primary btn-full" type="submit">Send Request</button>
-        <small>We respond within 24–48 hours.</small>
-      </form>
-    </div>
-  </section>
-
-  <!-- WHATSAPP FLOAT -->
-  <a class="whatsapp-float"
-     href="https://wa.me/919911146165?text=Hello%20Corefact%20Research%2C%20I%20want%20a%20quote%20for%20my%20market%20research%20project."
-     target="_blank"
-     aria-label="WhatsApp">💬</a>
-
-  <footer class="footer">
-    <div class="container footer-inner">
-      <img src="assets/logo.png" class="footer-logo" alt="Corefact Research"/>
-      <div>© <span id="year"></span> Corefact Research. All rights reserved.</div>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
